@@ -1,0 +1,25 @@
+{
+  "name": "defisomedia",
+  "authors": [
+    "Anton Kjörck Lindén <anton@noviumdesign.se>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "https://github.com/thoughtbot/bourbon.git#v5.0.0.beta.5",
+    "susy": "^2.2.12",
+    "jquery": "^2.2.3",
+    "breakpoint-sass": "compass-breakpoint#^2.7.0"
+  }
+}

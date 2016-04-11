@@ -1,0 +1,24 @@
+.home
+  .promo-boxes
+    +clearfix
+
+    .left .content,
+    .right .content
+      +container($container-width/2) // = 600px
+
+    .left
+      float: left
+      width: 50%
+
+      .content
+        float: right
+        padding: $base-spacing $base-spacing $base-spacing 0
+
+    .right
+      float: right
+      width: 50%
+      background-color: $light-gray
+
+      .content
+        float: left
+        padding: $base-spacing

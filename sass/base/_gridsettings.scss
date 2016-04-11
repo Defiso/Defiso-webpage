@@ -1,0 +1,15 @@
+$container-width: 1200px;
+
+$susy: (
+  container: $container-width,
+  columns: 24,
+  gutters: .5,
+);
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  @include container;
+}

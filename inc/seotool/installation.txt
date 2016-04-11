@@ -1,0 +1,39 @@
+﻿Installation.
+
+Filer.
+
+- main.js, tar emot förfrågan och kör ett ajax script. Eventuella meddelande till DOM ändras här.
+- analyze.php, den fil som ajax-förfrågningen körs mot.
+
+
+I mappen src.
+
+- seoTool, programmet som anropar berörande klasser. I funktionen reportFaliure() så ändrar man det som ska skrivas ut vid ett felmeddelande.
+-seoAnalyzer.php, den som gör större delen av analysen.
+-seoReport.php, den fil som skriver ut rapporten.
+-seoDomainChecker.php, den som kollar åldern på domänen.
+-seoDOMChecker.php, den som hämtar innehållet från en domän.
+
+
+För att installera rätt:
+1. Fixa en Google api-nyckel åt Defiso och aktivera insight för Defiso. Byt nyckel i seoAnalyzer.php
+(spara den som är registrerad på Limeloop för debug).
+2. i seoReport.php så ändrar ni mail-inställningar så att mailet går från Defiso.se.
+Ändra   
+
+  public $subject = 'Här är din SEO-Analys'; // Ämnet som kommer att visas i mailet.
+  public $senderEmail = 'info@limeloop.se'; // den mail som det ska skickas ifrån.
+  public $senderName = 'Limeloop'; // Namnet på avsändaren.
+  public $recivierName = 'Seorapport'; // Namnet på mottagaren. Namnet är ju okänt så sätt ett lämpligt namn för att undvika skräppost filter.
+
+
+Länkar:
+https://developers.google.com/apis-explorer/#
+https://developers.google.com/apis-explorer/#p/pagespeedonline/v2/
+
+
+Vid frågor, jonas@limeloop.se.
+
+
+
+

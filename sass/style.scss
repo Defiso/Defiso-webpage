@@ -1,0 +1,42 @@
+/*!
+Theme Name: defisomedia
+Theme URI: http://underscores.me/
+Author: Anton Kjörck Lindén
+Author URI: http://underscores.me/
+Description: A Wordpress theme for Defiso Media
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: defisomedia
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+defisomedia is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+@import "../bower_components/bourbon/core/bourbon";
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import "../bower_components/susy/sass/susy";
+
+@import "vendor/normalize";
+@import "base/base";
+
+@import "components/accessibility";
+@import "components/infinite-scroll";
+@import "components/svgloader";
+@import "components/header";
+@import "components/jumbotron";
+@import "components/nav/inline";
+@import "components/nav/off-canvas";
+@import "components/nav/footer";
+@import "components/testomonials";
+
+@import "layouts/default";
+
+@import "views/front-page";
