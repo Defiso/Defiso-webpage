@@ -1,4 +1,13 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+
+
+
 /**
  * defisomedia functions and definitions.
  *
@@ -15,6 +24,7 @@ if ( ! function_exists( 'defisomedia_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
 function defisomedia_setup() {
 	/*
 	 * Make theme available for translation.

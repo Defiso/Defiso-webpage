@@ -5,8 +5,7 @@ var sendReport;
 $(document).ready( function(){
     
   analyze = function(){ 
-      $(".loader-text").text(" ");
-
+    $(".loader-text").text(" ");
     var formvalues = $('form').serializeArray();
     var inputs = {"url" : formvalues[0].value,"keywords": formvalues[1].value.split(" "),"email": formvalues[2].value};
     $('.result').empty();    
