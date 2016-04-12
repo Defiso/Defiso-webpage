@@ -68,6 +68,19 @@ module.exports = function (grunt) {
                     'build/defisomedia/js/app.js': ['js/app.js']
                 }
             }
+        },
+
+        postcss: {
+          options: {
+            map: true, // inline sourcemaps
+
+            processors: [
+              require('autoprefixer')({browsers: '> 1%, last 2 versions'}), // add vendor prefixes
+            ]
+          },
+          dist: {
+            src: '*.css'
+          }
         }
 
 
@@ -79,7 +92,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-postcss');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['sass:build','concat','copy','uglify:build']);
+    grunt.registerTask('build', ['sass:build','concat','copy','uglify:build','postcss']);
 };
