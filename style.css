@@ -204,6 +204,9 @@ th {
     display: block;
     clear: both; }
 
+.no-scroll {
+  overflow: hidden; }
+
 button, [type='button'], [type='reset'], [type='submit'],
 .button {
   appearance: none;
@@ -509,6 +512,13 @@ hr {
     float: right; }
   .site-header #openMenu {
     padding: 0; }
+    .site-header #openMenu .hamburger {
+      display: inline-block;
+      margin-left: 0.5em;
+      width: 20px;
+      height: 12px;
+      background: url(images/icons/icon-menu.svg);
+      background-size: 20px 12px; }
 
 .jumbotron {
   background-repeat: no-repeat;
@@ -682,5 +692,14 @@ hr {
       .home .promo-boxes .right .content {
         float: left;
         padding: 2.625em 0 2.625em 1.75em; } }
+
+.blog .content-area {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .blog .content-area:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 /*# sourceMappingURL=style.css.map */

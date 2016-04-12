@@ -56,7 +56,7 @@
 				<nav id="site-navigation" class="inline-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-        <button type="button" id="openMenu">Meny</button>
+        <button type="button" id="openMenu">Meny <span class="hamburger"></span></button>
 			</div>
 		</div>
 	</header><!-- #masthead -->
