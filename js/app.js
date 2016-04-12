@@ -1,4 +1,22 @@
 
+/* -------- js/offcanvas-menu.js -------- */ 
+
+menuButton = $('#openMenu');
+menuWrapper = $('.menu-wrapper');
+mainWrapper = $('.main-wrapper');
+wrapperBackground = $('#wrapperBackground');
+
+menuButton.click(function() {
+  menuWrapper.attr('id', 'open');
+  mainWrapper.attr('id', 'menuOpen');
+})
+
+wrapperBackground.click(function() {
+  menuWrapper.removeAttr('id', 'open');
+  mainWrapper.removeAttr('id', 'menuOpen');
+})
+
+
 /* -------- js/seotool.js -------- */ 
 
 'use strict'
@@ -24,7 +42,7 @@ $(document).ready( function(){
      $('.loader-text').delay(3000).queue(function(n) {  $(this).text('Analyserar Webbplats'); n(); });
      $.ajax({  
         method: "POST", 
-        url: "/wp-content/themes/defisomedia/inc/seotool/analyze.php",
+        url: "inc/seotool/analyze.php",
         data: inputs,
         success  : function(data){         
           $('.loader-text').text('Skapar Rapport');

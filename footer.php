@@ -15,9 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'defisomedia' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'defisomedia' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'defisomedia' ), 'defisomedia', '<a href="http://underscores.me/" rel="designer">Anton Kjörck Lindén</a>' ); ?>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

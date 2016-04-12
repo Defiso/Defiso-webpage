@@ -1,0 +1,59 @@
+$menu-duration: $base-duration*1.5
+$menu-width: 250px
+
+.menu-wrapper
+  position: fixed
+  background-color: $light-gray
+  height: 100%
+  width: 0
+  right: 0
+  z-index: $z-index-menu
+  padding: $base-spacing
+  transform: translateX($menu-width/3)
+  transition: transform $menu-duration $base-timing
+
+  &#open
+    transform: translateX(0)
+    width: $menu-width
+
+  ul
+    @extend %no-list-style
+
+    float: left
+
+    a
+      color: $base-font-color
+      display: inline-block
+      margin-bottom: $small-spacing
+
+      img
+        display: none
+
+      &:hover,
+      &:focus
+        color: lighten($base-font-color, 20%)
+
+    > li > ul
+      padding-left: $small-spacing
+      width: 100%
+
+.main-wrapper
+  position: relative
+  z-index: $z-index-content
+  transition: transform $menu-duration $base-timing
+
+  &#menuOpen
+    transform: translateX(-$menu-width)
+
+    #wrapperBackground
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: rgba(0, 0, 0, 0.35)
+
+#wrapperBackground
+  z-index: $z-index-background
+  background: rgba(0, 0, 0, 0)
+  transition: background $menu-duration $base-timing

@@ -1,6 +1,23 @@
 .jumbotron
   background-repeat: no-repeat
   background-size: cover
-  
+  padding-top: 48px
+
   .inner
     +container
+
+    .content
+      +span(full)
+      padding: $base-spacing 0
+
+      +breakpoint($medium-screen)
+        +span(16)
+
+      +breakpoint($large-screen)
+        +span(10)
+
+      p
+        font-size: $large-font-size
+
+      button
+        @extend %cta

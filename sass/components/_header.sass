@@ -1,5 +1,5 @@
 .site-header
-  background-color: rgba(0,0,0,0.25)
+  background-color: rgba($theme-color, 0.9)
   padding: $small-spacing 0
   position: fixed
   width: 100%
@@ -8,6 +8,15 @@
     +container
 
   .site-branding
-    +span(12)
+    float: left
+
+    img
+      display: block
+
   .right
-    +span(12 last)
+    float: right
+
+  #openMenu
+    padding: 0
+
+    @extend %no-button-styling

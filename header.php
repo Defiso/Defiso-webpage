@@ -32,7 +32,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+
+<nav class="menu-wrapper">
+  <?php wp_nav_menu( array( 'theme_location' => 'off_canvas', 'menu_id' => 'off-canvas-menu' ) ); ?>
+</nav>
+
+<div id="page" class="site main-wrapper">
+  <div id="wrapperBackground"></div>
+
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'defisomedia' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -49,6 +56,7 @@
 				<nav id="site-navigation" class="inline-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
+        <button type="button" id="openMenu">Meny</button>
 			</div>
 		</div>
 	</header><!-- #masthead -->

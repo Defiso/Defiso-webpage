@@ -4,21 +4,41 @@
 
     .left .content,
     .right .content
-      +container($container-width/2) // = 600px
+      +container($container-width/2)
+      padding: $base-spacing
+
+      .header
+        +clearfix
+        width: 100%
+        margin-bottom: $small-spacing/2
+
+        h2,
+        .icon
+          float: left
+
+        h2
+          margin-top: 8px
+
+        .icon
+          margin-right: $small-spacing
 
     .left
-      float: left
-      width: 50%
 
-      .content
-        float: right
-        padding: $base-spacing $base-spacing $base-spacing 0
+      +breakpoint($medium-screen)
+        float: left
+        width: 50%
+
+        .content
+          float: right
+          padding: $small-spacing*3 $base-spacing $small-spacing*3 0
 
     .right
-      float: right
-      width: 50%
       background-color: $light-gray
 
-      .content
-        float: left
-        padding: $base-spacing
+      +breakpoint($medium-screen)
+        float: right
+        width: 50%
+
+        .content
+          float: left
+          padding: $small-spacing*3 0 $small-spacing*3 $base-spacing

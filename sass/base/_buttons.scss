@@ -1,7 +1,7 @@
 #{$all-buttons},
 .button {
   appearance: none;
-  background-color: $action-color;
+  background-color: $theme-color;
   border: 0;
   border-radius: $base-border-radius;
   color: #fff;
@@ -10,9 +10,9 @@
   font-family: $base-font-family;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
-  font-weight: 600;
+  font-weight: $base-font-weight;
   line-height: 1;
-  padding: $small-spacing $base-spacing;
+  padding: $small-spacing $small-spacing*3;
   text-decoration: none;
   transition: background-color $base-duration $base-timing;
   user-select: none;
@@ -21,7 +21,7 @@
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
+    background-color: shade($theme-color, 20%);
     color: #fff;
   }
 
@@ -30,7 +30,25 @@
     opacity: 0.5;
 
     &:hover {
-      background-color: $action-color;
+      background-color: $theme-color;
     }
+  }
+
+  &%cta {
+    background-color: $pink;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($pink, 20%);
+    }
+  }
+
+  &%no-button-styling {
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    vertical-align: baseline;
   }
 }

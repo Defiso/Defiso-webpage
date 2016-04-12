@@ -8,23 +8,34 @@ $heading-font-family: $base-font-family;
 
 // Font Sizes
 $base-font-size: 1em;
+$large-font-size: 1.188em;
+$h1-font-size: 2.313em;
+$h2-font-size: 1.75em;
 
 // Line height
 $base-line-height: 1.5;
-$heading-line-height: 1.2;
+$heading-line-height: 1.15;
 
 // Other Sizes
-$base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
+$base-font-weight: 400;
+$base-border-radius: 22px;
+$base-spacing: 1.75em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
+$z-index-menu: 1;
+$z-index-content: 2;
+$z-index-dropdown: 3;
+$z-index-background: 4;
 
 // Colors
-$theme-color: #554d7c;
 $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
-$light-gray: #ddd;
+$light-gray: #f4f5f5;
+$purple: #554d7c;
+$pink: #f36f6d;
+
+$theme-color: $purple;
 
 // Font Colors
 $base-font-color: $dark-gray;
