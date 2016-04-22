@@ -5,15 +5,14 @@ $menu-width: 250px
   position: fixed
   background-color: $light-gray
   height: 100%
-  width: 0
-  right: 0
+  width: $menu-width
   z-index: $z-index-menu
   padding: $base-spacing
-  transform: translateX($menu-width/3)
-  transition: transform $menu-duration $base-timing
+  right: -$menu-width
+  transition: right $menu-duration $base-timing
 
   &#open
-    transform: translateX(0)
+    right: 0
     width: $menu-width
 
   ul
@@ -40,10 +39,11 @@ $menu-width: 250px
 .main-wrapper
   position: relative
   z-index: $z-index-content
-  transition: transform $menu-duration $base-timing
+  left: 0
+  transition: left $menu-duration $base-timing
 
   &#menuOpen
-    transform: translateX(-$menu-width)
+    left: -$menu-width
 
     #wrapperBackground
       position: absolute

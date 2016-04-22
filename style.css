@@ -517,7 +517,7 @@ hr {
       margin-left: 0.5em;
       width: 20px;
       height: 12px;
-      background: url(images/icons/icon-menu.svg);
+      background: url("images/icons/icon-menu.svg");
       background-size: 20px 12px; }
 
 .jumbotron {
@@ -567,14 +567,13 @@ hr {
   position: fixed;
   background-color: #f4f5f5;
   height: 100%;
-  width: 0;
-  right: 0;
+  width: 250px;
   z-index: 1;
   padding: 1.75em;
-  transform: translateX(83.33333px);
-  transition: transform 225ms ease; }
+  right: -250px;
+  transition: right 225ms ease; }
   .menu-wrapper#open {
-    transform: translateX(0);
+    right: 0;
     width: 250px; }
   .menu-wrapper ul {
     float: left; }
@@ -593,9 +592,10 @@ hr {
 .main-wrapper {
   position: relative;
   z-index: 2;
-  transition: transform 225ms ease; }
+  left: 0;
+  transition: left 225ms ease; }
   .main-wrapper#menuOpen {
-    transform: translateX(-250px); }
+    left: -250px; }
     .main-wrapper#menuOpen #wrapperBackground {
       position: absolute;
       top: 0;
