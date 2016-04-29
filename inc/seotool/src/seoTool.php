@@ -1,11 +1,13 @@
-
-<?php require_once("seoReport.php"); ?>
-<?php require_once("seoAnalyzer.php"); ?>
-
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+include(__DIR__.'/seoReport.php');
+include(__DIR__.'/seoAnalyzer.php');
+include(__DIR__.'/seoHTMLTemplate.php');
 
 class seoTool{
-
     public $url;
     public $keywords = array();
     public $email;
@@ -15,8 +17,9 @@ class seoTool{
    public function __construct(){
      $this->url = isset($_POST["url"]) ? $_POST["url"] : "";
      $this->email = isset($_POST["email"]) ? $_POST["email"] : ""; 
-     if(isset($_POST["keywords"])){
-       foreach($_POST["keywords"] as $word){
+     $keywords = isset($_POST["keywords"]) ? explode(" ", $_POST["email"]) : array();
+     if($keywords){
+       foreach($keywords as $word){
          array_push($this->keywords, $word);
       }
      }
@@ -27,14 +30,18 @@ class seoTool{
   public function StartAnalyze(){
     $this->seoAnalyzer->webpage = $this->url;
     $this->seoAnalyzer->keywords = $this->keywords;
-    
-    if($this->seoAnalyzer->Analyze() != false){
+
+    if($this->seoAnalyzer->Analyze() != false && (strpos(strtolower($this->url), 'defiso') == false)){
       $this->seoReport->Analyze =  $this->seoAnalyzer;
+      //unset($this->seoAnalyzer);
       $this->seoReport->recivierName = "Din SEO-Analys";
       $this->seoReport->recivierEmail = $this->email;
-      //$this->seoReport->CreateHTMLReport();
+      $this->seoReport->CreateHTMLReport();
       $this->seoReport->SendReport();
-      echo $this->seoReport->finalReport;
+      $html = new seoHTMLTemplate();
+      $html->analyze =  $this->seoReport->Analyze;
+      echo $html->printHTMLReport();
+    
     }else{
        $this->ReportFailure();
     }

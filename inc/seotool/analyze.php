@@ -1,7 +1,7 @@
-<?php header("Access-Control-Allow-Origin: *"); ?>
-
-<?php include("src/seoTool.php"); ?>
+<?php
+include(__DIR__.'/src/seoTool.php');
+?>
 <?php 
-    $seoTool = new seoTool();
-    $seoTool->StartAnalyze();
+  $seoTool = new seoTool();
+  $seoTool->StartAnalyze();
 ?>

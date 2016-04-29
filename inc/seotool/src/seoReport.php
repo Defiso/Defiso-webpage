@@ -1,7 +1,9 @@
 
 <?php require('phpmailer/PHPMailerAutoload.php')?>
 <?php 
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 class seoReport{
   
@@ -27,12 +29,6 @@ class seoReport{
     $this->mailObject->CharSet = 'UTF-8';
   }
   
-
-  
-  
-  
-  
-  
   /* Sends the report */
   public function SendReport(){
     $this->mailObject = new PHPMailer();
@@ -40,6 +36,7 @@ class seoReport{
     $this->mailObject->Subject = $this->subject;
     $this->mailObject->Body = "Mail";
     $this->mailObject->MsgHTML( $this->CreateHTMLReport());
+    
    // $this->mailObject->AddStringAttachment($this->CreateReportPDF(), 'seorapport', 'base64', 'application/pdf');
     $this->mailObject->IsHTML(true);  
     $this->mailObject->From = $this->senderEmail;
@@ -52,7 +49,8 @@ class seoReport{
     } else {
       $callback['success'] = true; 
     }
-    
+    //unset($this->mailObject);
+    //unset($this->finalReport);
   }
     
   private function CreateEmail(){
@@ -82,13 +80,17 @@ class seoReport{
       
       $okMessage = "Allt ser bra ut!";
       $errorMessage = " fel.";
-      $okImage = "img/check.png";
-      $errorImage = "img/cross.png";
-      $logo = "img/logo.png";
+      $okImage = __DIR__."/img/check.png";
+      $errorImage = __DIR__."/img/cross.png";
+      $logo = __DIR__."/img/logo.png";
       $keywordString = ($this->Analyze->multipleKeywords) ? "Sökorden" : "Sökord";
+      
       /* Dynamic parameters */
       
+      
+      
       /* Header */
+      
       $url = $this->Analyze->orignalName;
       $keywords = $this->Analyze->keywordsInSentence;
       $loadingResult = ($this->Analyze->timeToLoadPage < 3) ? 'Bra!' : 'Dålig';
@@ -267,7 +269,6 @@ class seoReport{
       $resultText  = "<p>Text om resultatet</p>";
     
       $html = <<<EOD
-     
 <table class="body" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;">
   <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
     <td class="center" align="center" valign="top" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;">
@@ -843,7 +844,8 @@ EOD;
       
       $emailHTML .= $html;
       $emailHTML .= "</body></html>"; //Dynamisk String
-      $this->finalReport = $html;  
+      $this->finalReport = $html; 
+      unset($html); // Free memory
       return $emailHTML;
       
     }
