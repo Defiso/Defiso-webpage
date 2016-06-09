@@ -54,7 +54,8 @@ function defisomedia_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'defisomedia' ),
+		'primary' => esc_html__( 'Huvudmeny', 'defisomedia' ),
+		'footer' => esc_html__( 'Sidfot', 'defisomedia' ),
 		'off_canvas' => esc_html__( 'Off Canvas', 'defisomedia' ),
 	) );
 

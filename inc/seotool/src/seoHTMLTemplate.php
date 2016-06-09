@@ -13,9 +13,9 @@ class seoHTMLTemplate{
 
       $okMessage = "Allt ser bra ut!";
       $errorMessage = " fel.";
-      $okImage = __DIR__."/img/check.png";
-      $errorImage = __DIR__."/img/cross.png";
-      $logo = __DIR__."/img/logo.png";
+      $okImage = "/wp-content/themes/defisomedia/inc/seoTool/src/img/check.png";
+      $errorImage = "/wp-content/themes/defisomedia/inc/seoTool/src/img/cross.png";
+      $logo = "/wp-content/themes/defisomedia/inc/seoTool/src/img/logo.png";
       $keywordString = ($this->analyze->multipleKeywords) ? "Sökorden" : "Sökord";
       
       /* Dynamic parameters */      
@@ -202,9 +202,69 @@ class seoHTMLTemplate{
       
     
       $html = <<<EOD
-      <h1>{$domainPass["message"]}</h1>
+      <div class="container seo-result">
+        <h2>Hemsida</h2>
+        <p><a href="http://{$url}" target="_blank">{$url}</a></p>
+
+        <div class="title">
+          <header><h2>Title</h2> <div class="status"><img src="{$titlePass["image"]}" class="">{$titlePass["error"]}{$titlePass["message"]}</div></header>
+          <div class="content">
+            <ul>
+              <li><img src="{$pageContainsOnlyOneH1Tag["image"]}"> {$pageContainsOnlyOneH1Tag["message"]}</li>
+              <li><img src="{$titleContainKeyword["image"]}"> {$titleContainKeyword["message"]}</li>
+              <li><img src="{$titleNotToLong["image"]}">{$titleNotToLong["message"]}</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr>
+
+        {descriptionPass["message"]}
+
+        {$descriptionContainsKeywords["message"]}
+
+        {$descriptionNoToLong["message"]}
+
+        {$imagesPass["message"]}
+
+        {$imagesAltContainsKeyword["message"]}
+
+        {$imagesAltMissingCount["message"]}
+
+        {$imagesFilenameContainsKeyword["message"]}
+
+        {$textPass["message"]}
+
+        {$totalWordCount["message"]}
+
+        {$keywordAppearsMoreThenFiveTimes["message"]}
+
+        {$keywordsAreNotEmphasized["message"]}
+
+        {$keywordsAppearsInText["message"]}
+
+        {$density["message"]}
+
+        {$headlinePass["message"]}
+
+        {$pageContainsOnlyOneH1Tag["message"]}
+
+        {$H1TagsContainsKeyword["message"]}
+
+        {$keywordAppearsInHeadlines["message"]}
+
+        {$keywordAppearsInSemiHeadlines["message"]}
+
+        {$domainPass["message"]}
+
+        {$domainContainSeperator["message"]}
+
+        {$domainNameContainsKeywords["message"]}
+
+        {$canonicalPass["message"]}
+    </div>
       
-  EOD;
+EOD;
       return $html;
   }
 

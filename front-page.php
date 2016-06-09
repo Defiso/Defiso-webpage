@@ -81,6 +81,23 @@ get_header(); ?>
         </div>
       </div>
 
+      <div class="three-col-boxes">
+        <div class="content">
+          <div class="header">
+            <img class="icon" src="<?php echo get_template_directory_uri(); ?>/icons/landing-page.svg" alt="Landningssidor">
+            <h2>Varför sökmotoroptimering med Defiso?</h2>
+          </div>
+          <div class="bix">
+        </div>
+      </div>
+
+      <div class="reporting">
+        <div class="header">
+          <img class="icon" src="<?php echo get_template_directory_uri(); ?>/icons/landing-page.svg" alt="Landningssidor">
+          <h2>Se resultat med månadsrapportering</h2>
+        </div>
+      </div>
+
 
     </main><!-- #main -->
   </div><!-- #primary -->

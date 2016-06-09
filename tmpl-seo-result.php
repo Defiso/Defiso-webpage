@@ -27,7 +27,6 @@
           url: "<?php echo get_template_directory_uri();?>/inc/seoTool/analyze.php",
           data: inputs,
           success: function (data){
-            console.log(data);
             $("#loader").hide();
             $(".seo-target").html(data);
           },

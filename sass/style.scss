@@ -27,6 +27,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "vendor/normalize";
 @import "base/base";
 
+@import "mixins/box-header";
+
 @import "components/accessibility";
 @import "components/infinite-scroll";
 @import "components/svgloader";
@@ -36,9 +38,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "components/nav/off-canvas";
 @import "components/nav/footer";
 @import "components/testomonials";
+@import "components/footer";
 
 @import "layouts/default";
 
 @import "views/front-page";
 @import "views/posts/posts";
 @import "views/posts/single";
+@import "views/seo-result";

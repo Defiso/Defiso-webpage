@@ -8,19 +8,7 @@
       padding: $base-spacing
 
       .header
-        +clearfix
-        width: 100%
-        margin-bottom: $small-spacing/2
-
-        h2,
-        .icon
-          float: left
-
-        h2
-          margin-top: 8px
-
-        .icon
-          margin-right: $small-spacing
+        +box-header
 
     .left
 
@@ -42,3 +30,23 @@
         .content
           float: left
           padding: $small-spacing*3 0 $small-spacing*3 $base-spacing
+
+  .three-col-boxes
+    background-color: $light-gray
+
+    .content
+      +container
+      padding: $base-spacing 0
+
+    .header
+      +box-header
+
+    .box
+
+  .reporting
+    +container
+    padding: $base-spacing 0
+
+    .header
+      +box-header
+
