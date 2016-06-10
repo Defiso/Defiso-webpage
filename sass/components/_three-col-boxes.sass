@@ -1,0 +1,25 @@
+.three-col-boxes
+  background-color: $light-gray
+
+  .content
+    +container
+    padding: $base-spacing 0
+
+  .header
+    +box-header
+    margin-bottom: $small-spacing
+
+  .box
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(8)
+
+      &:last-child
+        +span(8 last)
+
+    .illustration
+      display: block
+      margin: auto
+      max-height: 120px
+      margin-bottom: $base-spacing

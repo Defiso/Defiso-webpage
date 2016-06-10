@@ -28,6 +28,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "base/base";
 
 @import "mixins/box-header";
+@import "mixins/centerer";
 
 @import "components/accessibility";
 @import "components/infinite-scroll";
@@ -38,6 +39,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "components/nav/off-canvas";
 @import "components/nav/footer";
 @import "components/testomonials";
+@import "components/promo-boxes";
+@import "components/three-col-boxes";
 @import "components/footer";
 
 @import "layouts/default";

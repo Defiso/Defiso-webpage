@@ -1,0 +1,31 @@
+.promo-boxes
+  +clearfix
+
+  .left .content,
+  .right .content
+    +container($container-width/2)
+    padding: $base-spacing
+
+    .header
+      +box-header
+
+  .left
+
+    +breakpoint($medium-screen)
+      float: left
+      width: 50%
+
+      .content
+        float: right
+        padding: $small-spacing*3 $base-spacing $small-spacing*3 0
+
+  .right
+    background-color: $light-gray
+
+    +breakpoint($medium-screen)
+      float: right
+      width: 50%
+
+      .content
+        float: left
+        padding: $small-spacing*3 0 $small-spacing*3 $base-spacing

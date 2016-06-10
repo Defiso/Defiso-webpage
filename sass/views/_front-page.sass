@@ -1,52 +1,70 @@
-.home
-  .promo-boxes
+.reporting
+  +container
+  padding: $base-spacing 0
+
+  .reporting-header
+    +box-header
+    margin-bottom: $small-spacing
+
+  .reporting-content-container
     +clearfix
+    position: relative
 
-    .left .content,
-    .right .content
-      +container($container-width/2)
-      padding: $base-spacing
-
-      .header
-        +box-header
-
-    .left
+    .reporting-image
+      +span(full)
 
       +breakpoint($medium-screen)
-        float: left
-        width: 50%
+        +span(12)
 
-        .content
-          float: right
-          padding: $small-spacing*3 $base-spacing $small-spacing*3 0
+      +breakpoint($large-screen)
+        +span(16)
 
-    .right
-      background-color: $light-gray
+    .reporting-text
+      +span(full)
 
       +breakpoint($medium-screen)
-        float: right
-        width: 50%
+        +centerer(false, true)
+        right: 0
+        width: span(12 last)
 
-        .content
-          float: left
-          padding: $small-spacing*3 0 $small-spacing*3 $base-spacing
+      +breakpoint($large-screen)
+        +centerer(false, true)
+        right: 0
+        width: span(8 last)
 
-  .three-col-boxes
-    background-color: $light-gray
+.contact
+  +clearfix
+  background-position: right
+  background-size: cover
+  background-repeat: no-repeat
+  padding: $base-spacing
 
-    .content
-      +container
-      padding: $base-spacing 0
+  +breakpoint($medium-screen)
+    padding: $base-spacing*3 0
 
-    .header
-      +box-header
+  .contact-header
+    +box-header
 
-    .box
+  .contact-card
+    +span(full)
+    background-color: white
+    padding: $base-spacing
 
-  .reporting
-    +container
-    padding: $base-spacing 0
+    +breakpoint($medium-screen)
+      +span(16)
 
-    .header
-      +box-header
+    .contact-information,
+    .contact-form
+      +span(full)
 
+      +breakpoint($medium-screen)
+        +span(12)
+
+        &:last-child
+          +span(12 last)
+
+      textarea
+        min-height: 120px
+
+      button
+        @extend %cta

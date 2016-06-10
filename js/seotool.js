@@ -3,28 +3,28 @@ var analyze;
 var sendReport;
 
 $(document).ready( function(){
-    
-  analyze = function(){ 
+
+  analyze = function(){
     $(".loader-text").text(" ");
     var formvalues = $('form').serializeArray();
     var inputs = {"url" : formvalues[0].value,"keywords": formvalues[1].value.split(" "),"email": formvalues[2].value};
-    $('.result').empty();    
+    $('.result').empty();
     var urlInput     =   $("#url-input");
     var keywordInput =   $("#keyword-input");
     var emailInput   =   $("#email-input");
-  
+
     if(urlInput[0].checkValidity() && keywordInput[0].checkValidity() && emailInput[0].checkValidity()){
     $(".error-text").text("");
      $("#loader").css("display","block");
      $(".loader-text").text("Validerar webbadress");
      $('.loader-text').delay(3000).queue(function(n) {  $(this).text('Analyserar Webbplats'); n(); });
-     $.ajax({  
+     $.ajax({
         method: "POST", 
         url: "inc/seotool/analyze.php",
         data: inputs,
-        success  : function(data){         
+        success  : function(data){
           $('.loader-text').text('Skapar Rapport');
-           $('.loader-text').delay(3000).queue(function(n) { 
+           $('.loader-text').delay(3000).queue(function(n) {
             $("#loader").hide();
               $(".result").html(data);
               $('.loader-text').text(' ');
@@ -36,7 +36,7 @@ $(document).ready( function(){
       },complete : function(data){
       }
     })
-   }else{  
+   }else{
       $("#loader").css("display","none");
       $(".loader-text").text(" ");
       var message = "Vänligen fyll i alla fält.";
@@ -46,5 +46,5 @@ $(document).ready( function(){
       $(".error-text").text(message);
 
    }
-  } 
+  }
 });
