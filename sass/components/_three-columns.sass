@@ -1,21 +1,33 @@
-.three-col-boxes
+.three-columns
   background-color: $light-gray
+
+  &.center
+    text-align: center
 
   .content
     +container
     padding: $base-spacing 0
 
-  .header
-    +box-header
+  .header,
+  .header-center
     margin-bottom: $small-spacing
 
-  .box
+  .header
+    +box-header
+
+  .header-center
+    +box-header(center)
+
+  .columns
+    +clearfix
+
+  .column
     +span(full)
 
     +breakpoint($medium-screen)
       +span(8)
 
-      &:last-child
+      &:nth-child(3n+3)
         +span(8 last)
 
     .illustration

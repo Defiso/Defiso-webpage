@@ -1,7 +1,10 @@
+$jumbotron-spacing: 48px
+
 .jumbotron
   background-repeat: no-repeat
   background-size: cover
-  padding-top: 48px
+  background-color: $theme-color
+  padding: $jumbotron-spacing 0
 
   .inner
     +container
@@ -9,19 +12,12 @@
     .content
       +span(full)
       padding: $base-spacing 0
-
-      +breakpoint($medium-screen)
-        +span(16)
-
-      +breakpoint($large-screen)
-        +span(10)
+      color: white
+      text-align: center
 
       p
         font-size: $large-font-size
 
-      button
-        @extend %cta
-
-      .form-group input
-        margin-top: $small-spacing
-        box-shadow: $base-box-shadow
+        +breakpoint($medium-screen)
+          margin: auto
+          max-width: 60%

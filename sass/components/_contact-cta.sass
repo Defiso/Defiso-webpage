@@ -1,0 +1,24 @@
+.contact-cta
+  background-color: $theme-color
+
+  .inner
+    +container
+    color: #ffffff
+    padding: $base-spacing
+
+    .header
+      +span(8)
+      +push(2)
+      text-align: center
+      padding: $small-spacing 0
+
+    form
+      +span(12)
+
+      input
+        display: inline-block
+        width: auto
+        margin-bottom: 0
+
+      button
+        @extend %cta-button

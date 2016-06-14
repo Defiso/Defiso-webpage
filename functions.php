@@ -93,6 +93,26 @@ endif;
 add_action( 'after_setup_theme', 'defisomedia_setup' );
 
 /**
+ * Custom post types
+ */
+ add_action( 'init', 'create_post_type' );
+ function create_post_type() {
+   register_post_type( 'testemonials',
+     array(
+       'labels' => array(
+         'name' => __( 'Referenser' ),
+         'singular_name' => __( 'Referens' )
+       ),
+       'public' 			=> true,
+       'has_archive'	=> false,
+			 'rewrite'			=> array( 'slug' => 'referens' ),
+			 'supports'			=> array( 'title', 'editor', 'thumbnail' )
+     )
+   );
+ }
+
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

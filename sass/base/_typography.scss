@@ -16,6 +16,10 @@ h6 {
   font-size: modular-scale(1);
   line-height: $heading-line-height;
   margin: 0 0 0.25em;
+
+  &.base-weight-header {
+    font-weight: $base-font-weight;
+  }
 }
 
 h1 {
@@ -27,11 +31,6 @@ h2 {
 }
 
 h3 {
-  font-size: $h2-font-size;
-  font-weight: $base-font-weight;
-}
-
-h4 {
   font-size: $base-font-size;
   text-transform: uppercase;
 }

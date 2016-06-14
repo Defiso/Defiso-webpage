@@ -17,16 +17,18 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-      <div class="jumbotron" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/header.jpeg')">
+      <div class="front-page-jumbotron" <?php if ( get_field('jumbotron_background') ): ?> style="background-image: url('<?php echo get_field('jumbotron_background') ?>')" <?php endif; ?>>
         <div class="inner">
           <div class="content">
-            <h1>Sökmotoroptimering som ger fler affärer</h1>
-            <p>Defisos unika koncept inom sökmotoroptimering (SEO) leder till fler affärer, oavsett bransch och oavsett storleken på ditt företag. Vi tar dig till toppen!</p>
             <?php
-            /**
-             * @hooked seotool
-             */
-            do_action( 'seotool' );
+              the_title('<h1 class="entry-title">','</h1>');
+    					if ( get_field('jumbotron_description') ) {
+    						echo '<p>' . get_field('jumbotron_description') . '</p>';
+    					}
+              /**
+               * @hooked seotool
+               */
+              do_action( 'seotool' );
             ?>
           </div>
         </div>
@@ -57,57 +59,46 @@ get_header(); ?>
 
       <div class="testomonials">
         <div class="inner">
-          <h3>Etablerade nog för stora bolag. Små nog för att se varje kund.</h3>
+          <h2 class="base-weight-header">Etablerade nog för stora bolag. Små nog för att se varje kund.</h2>
           <div class="clients">
+          <?php foreach(get_field('testemonials') as $post_object): ?>
             <div class="client">
-              <img src="<?php echo get_template_directory_uri(); ?>/icons/fjallraven.png" alt="Client">
+              <img src="<?php echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post_object->ID)); ?>" alt="<?php echo get_the_title($post_object->ID) ?>" />
             </div>
-            <div class="client">
-              <img src="<?php echo get_template_directory_uri(); ?>/icons/fjallraven.png" alt="Client">
-            </div>
-            <div class="client">
-              <img src="<?php echo get_template_directory_uri(); ?>/icons/fjallraven.png" alt="Client">
-            </div>
-            <div class="client">
-              <img src="<?php echo get_template_directory_uri(); ?>/icons/fjallraven.png" alt="Client">
-            </div>
-            <div class="client">
-              <img src="<?php echo get_template_directory_uri(); ?>/icons/fjallraven.png" alt="Client">
-            </div>
-            <div class="client">
-              <img src="<?php echo get_template_directory_uri(); ?>/icons/fjallraven.png" alt="Client">
-            </div>
+  				<?php endforeach; ?>
           </div>
         </div>
       </div>
 
-      <div class="three-col-boxes">
+      <div class="three-columns">
         <div class="content">
           <div class="header">
             <img class="icon" src="<?php echo get_template_directory_uri(); ?>/icons/search.svg" alt="Sökmotoroptimering">
             <h2>Varför sökmotoroptimering med Defiso?</h2>
           </div>
-          <div class="box">
-            <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/telescope.svg" alt="Teleskop">
-            <h4>Alla söker på nätet</h4>
-            <p>
-              Sökmotorer är numera det självklara alternativet för att snabbt och effektivt hitta speciella produkter eller tjänster. Undersökningar visar att 90 procent av alla internetanvändare använder sig av sökmotorer för att hitta den information de söker.
-            </p>
-          </div>
-          <div class="box">
-            <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/rocket.svg" alt="Raket">
-            <h4>En kraftfull försäljningskanal</h4>
-            <p>
-              Med sökmotoroptimering når du potentiella i kunder i ett kritiskt skede - mitt i köpprocessen när de precis sökt efter efter en produkt eller tjänst. 75 procent av de beställningar och förfrågningar som sker på hemsidor kommer via sökmotorer.
-            </p>
-          </div>
-          <div class="box">
-            <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/moon-landing.svg" alt="Månlandning">
-            <h4>Alla söker på nätet</h4>
-            <p>
-              Resultatet är det enda som räknas – inte enbart rankning utan främst de affärer som genereras i slutändan. Till exempel mäter vi antalet samtal och förfrågningar du får in. SEO med Defiso Media ska alltid löna sig för dig som företagare.
-            </p>
-            <a href="/resultat">Läs mer om vårt resultatfokus</a>
+          <div class="columns">
+            <div class="column">
+              <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/telescope.svg" alt="Teleskop">
+              <h3>Alla söker på nätet</h3>
+              <p>
+                Sökmotorer är numera det självklara alternativet för att snabbt och effektivt hitta speciella produkter eller tjänster. Undersökningar visar att 90 procent av alla internetanvändare använder sig av sökmotorer för att hitta den information de söker.
+              </p>
+            </div>
+            <div class="column">
+              <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/rocket.svg" alt="Raket">
+              <h3>En kraftfull försäljningskanal</h3>
+              <p>
+                Med sökmotoroptimering når du potentiella i kunder i ett kritiskt skede - mitt i köpprocessen när de precis sökt efter efter en produkt eller tjänst. 75 procent av de beställningar och förfrågningar som sker på hemsidor kommer via sökmotorer.
+              </p>
+            </div>
+            <div class="column">
+              <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/moon-landing.svg" alt="Månlandning">
+              <h3>Alla söker på nätet</h3>
+              <p>
+                Resultatet är det enda som räknas – inte enbart rankning utan främst de affärer som genereras i slutändan. Till exempel mäter vi antalet samtal och förfrågningar du får in. SEO med Defiso Media ska alltid löna sig för dig som företagare.
+              </p>
+              <a href="/resultat">Läs mer om vårt resultatfokus</a>
+            </div>
           </div>
         </div>
       </div>
@@ -122,11 +113,11 @@ get_header(); ?>
             <img src="http://placehold.it/800x450">
           </div>
           <div class="reporting-text">
-            <h4>Se hur många samtal du har fått</h4>
+            <h3>Se hur många samtal du har fått</h3>
             <p>
               Via speciella mätnummer analyserar vi antal förfrågningar du har fått in via sökoptimering. Du kan enkelt följa när du fått samtal från din sökoptimering och från vilka du fått det
             </p>
-            <h4>Sammanställningar över antal epost</h4>
+            <h3>Sammanställningar över antal epost</h3>
             <p>
               Vi sammanställer alla de epost du fått under en månad och tillsammans följer vi upp de resultat du fått.
             </p>

@@ -6,11 +6,17 @@
     +container($container-width/2)
     padding: $base-spacing
 
+    .header,
+    .header-center
+      margin-bottom: $small-spacing
+
     .header
       +box-header
 
-  .left
+    .header-center
+      +box-header(center)
 
+  .left
     +breakpoint($medium-screen)
       float: left
       width: 50%

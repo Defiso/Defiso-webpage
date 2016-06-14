@@ -1,0 +1,27 @@
+.two-columns
+
+  .content
+    +container
+    padding: $base-spacing 0
+
+  .header,
+  .header-center
+    margin-bottom: $small-spacing
+
+  .header
+    +box-header
+
+  .header-center
+    +box-header(center)
+
+  .columns
+    +clearfix
+
+  .column
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(6)
+
+      &:nth-child(2n+2)
+        +span(6 last)

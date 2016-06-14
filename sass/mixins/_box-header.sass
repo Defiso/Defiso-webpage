@@ -1,4 +1,4 @@
-=box-header
+=box-header($center: false)
   +clearfix
   width: 100%
   margin-bottom: $small-spacing/2
@@ -12,3 +12,9 @@
 
   .icon
     margin-right: $small-spacing
+
+  @if $center
+    text-align: center
+
+    h2
+      float: none

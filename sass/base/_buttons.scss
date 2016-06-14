@@ -34,7 +34,12 @@
     }
   }
 
-  &%cta {
+  &.block-button {
+    display: block;
+    text-align: center;
+  }
+
+  &%cta-button {
     background-color: $pink;
     border-radius: 0;
 

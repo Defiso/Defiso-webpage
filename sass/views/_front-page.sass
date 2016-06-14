@@ -1,3 +1,27 @@
+.front-page-jumbotron
+  @extend .jumbotron
+  padding-bottom: 0
+
+  .inner .content
+    color: $base-font-color
+    text-align: left
+
+    +breakpoint($medium-screen)
+      +span(16)
+
+    +breakpoint($large-screen)
+      +span(10)
+
+    p
+      max-width: 100% !important
+
+    button
+      @extend %cta-button
+
+    .form-group input
+      margin-top: $small-spacing
+      box-shadow: $base-box-shadow
+
 .reporting
   +container
   padding: $base-spacing 0
@@ -64,7 +88,7 @@
           +span(12 last)
 
       textarea
-        min-height: 120px
+        min-height: 113px
 
       button
-        @extend %cta
+        @extend %cta-button
