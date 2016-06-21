@@ -35,7 +35,9 @@
 <body <?php body_class(); ?>>
 
 <nav class="menu-wrapper">
-  <?php wp_nav_menu( array( 'theme_location' => 'off_canvas', 'menu_id' => 'off-canvas-menu' ) ); ?>
+  <?php wp_nav_menu( array( 'theme_location' => 'off_canvas1', 'menu_id' => 'off-canvas-menu-1' ) ); ?>
+  <?php wp_nav_menu( array( 'theme_location' => 'off_canvas2', 'menu_id' => 'off-canvas-menu-2' ) ); ?>
+  <?php wp_nav_menu( array( 'theme_location' => 'off_canvas3', 'menu_id' => 'off-canvas-menu-3' ) ); ?>
 </nav>
 
 <div id="page" class="site main-wrapper">

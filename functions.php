@@ -53,7 +53,9 @@ function defisomedia_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Huvudmeny', 'defisomedia' ),
 		'footer' => esc_html__( 'Sidfot', 'defisomedia' ),
-		'off_canvas' => esc_html__( 'Off Canvas', 'defisomedia' ),
+		'off_canvas1' => esc_html__( 'Off Canvas 1', 'defisomedia' ),
+		'off_canvas2' => esc_html__( 'Off Canvas 2', 'defisomedia' ),
+		'off_canvas3' => esc_html__( 'Off Canvas 3', 'defisomedia' ),
 	) );
 
 	/*
