@@ -33,11 +33,12 @@ select[multiple] {
   box-sizing: border-box;
   margin-bottom: 0.625em;
   padding: $base-spacing / 3;
-  transition: border-color $base-duration $base-timing;
+  transition: border-color box-shadow $base-duration $base-timing;
   width: 100%;
 
   &:hover {
     border-color: shade($base-border-color, 20%);
+    box-shadow: $base-box-shadow;
   }
 
   &:focus {

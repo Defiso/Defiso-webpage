@@ -21,7 +21,8 @@ get_header(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-          <div class="contact" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/contact-background.jpg')">
+          <div class="contact">
+            <div class="google-maps" id="map"></div>
             <div class="inner">
               <div class="contact-card">
                 <div class="contact-header">

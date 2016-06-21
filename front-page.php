@@ -61,7 +61,7 @@ get_header(); ?>
         <div class="inner">
           <h2 class="base-weight-header">Etablerade nog för stora bolag. Små nog för att se varje kund.</h2>
           <div class="clients">
-          <?php foreach(get_field('testemonials') as $post_object): ?>
+          <?php foreach(get_field('featured_quote_testemonials') as $post_object): ?>
             <div class="client">
               <img src="<?php echo get_field('logotype', $post_object->ID); ?>" alt="<?php echo get_the_title($post_object->ID) ?>" />
             </div>
@@ -125,8 +125,8 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="google-maps" id="map"></div>
       <div class="contact">
+        <div class="google-maps" id="map"></div>
         <div class="inner">
           <div class="contact-card">
             <div class="contact-header">

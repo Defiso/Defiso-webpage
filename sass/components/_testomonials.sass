@@ -2,16 +2,23 @@
   background-color: $theme-color
 
   .inner
-    +container
+    @extend %container
     color: #ffffff
-    padding: $base-spacing
+    padding-top: $base-spacing
+    padding-bottom: $base-spacing
     text-align: center
+
+    h2
+      margin-bottom: $small-spacing
 
     .clients
       +span(full)
 
       .client
-        +span(4)
+        +gallery(12)
 
-        &:last-child
-          +span(4 last)
+        +breakpoint($medium-screen)
+          +gallery(8)
+
+        +breakpoint($large-screen)
+          +gallery(4)

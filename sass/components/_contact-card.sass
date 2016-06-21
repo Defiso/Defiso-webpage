@@ -1,12 +1,21 @@
 .contact
   +clearfix
+  position: relative
   background-position: right
   background-size: cover
   background-repeat: no-repeat
-  padding: $base-spacing
+  padding: $base-spacing $small-spacing
 
   +breakpoint($medium-screen)
     padding: $base-spacing*3 0
+
+  .google-maps
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: $base-z-index
 
   .inner
     @extend %container
@@ -16,6 +25,7 @@
 
   .contact-card
     +span(full)
+    position: relative
     background-color: white
     padding: $base-spacing
 
@@ -25,6 +35,9 @@
     .contact-information,
     .contact-form
       +span(full)
+
+      +breakpoint(max-width $medium-screen)
+        margin-top: $base-spacing
 
       +breakpoint($medium-screen)
         +span(12)

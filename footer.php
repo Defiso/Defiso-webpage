@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="inner">
-      
+
       <div class="top">
         <img src="<?php echo get_template_directory_uri(); ?>/images/logo-white.svg" alt="Defisos logotype">
       </div>
@@ -47,11 +47,15 @@
             // How zoomed in you want the map to start at (always required)
             zoom: 15,
             scrollwheel: false,
+						mapTypeControl: false,
+					  streetViewControl: false,
+					  rotateControl: false,
+					  fullscreenControl: false,
 
             // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(59.335647, 18.058565),
+            center: new google.maps.LatLng(59.335607, 18.040728),
 
-            // How you would like to style the map. 
+            // How you would like to style the map.
             // This is where you would paste any style found on Snazzy Maps.
             styles: [
               {
@@ -261,7 +265,7 @@
             ]
         };
 
-        // Get the HTML DOM element that will contain your map 
+        // Get the HTML DOM element that will contain your map
         // We are using a div with id="map" seen below in the <body>
         var mapElement = document.getElementById('map');
 

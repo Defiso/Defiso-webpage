@@ -1,4 +1,5 @@
 $container-width: 1200px;
+$container-spacing: $small-spacing;
 
 $susy: (
   container: $container-width,
@@ -12,6 +13,6 @@ $susy: (
 
 %container {
   @include container;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $container-spacing;
+  padding-right: $container-spacing;
 }

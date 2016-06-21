@@ -14,14 +14,15 @@
   line-height: 1;
   padding: $small-spacing $small-spacing*3;
   text-decoration: none;
-  transition: background-color $base-duration $base-timing;
+  transition: background-color box-shadow $base-duration $base-timing;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 
   &:hover,
   &:focus {
-    background-color: shade($theme-color, 20%);
+    background-color: shade($theme-color, 15%);
+    box-shadow: $base-box-shadow;
     color: #fff;
   }
 
@@ -45,7 +46,7 @@
 
     &:hover,
     &:focus {
-      background-color: shade($pink, 15%);
+      background-color: shade($pink, 10%);
     }
   }
 

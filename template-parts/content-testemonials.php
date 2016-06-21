@@ -65,7 +65,7 @@
 				endif;
 
 				?>
-			
+
 		</div>
 	</div><!-- .entry-content -->
 

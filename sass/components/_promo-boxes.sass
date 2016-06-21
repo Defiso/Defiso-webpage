@@ -4,7 +4,7 @@
   .left .content,
   .right .content
     +container($container-width/2)
-    padding: $base-spacing
+    padding: $container-spacing
 
     .header
       +box-header
@@ -19,7 +19,7 @@
 
       .content
         float: right
-        padding: $small-spacing*3 $base-spacing $small-spacing*3 0
+        padding: $small-spacing*3 $base-spacing $small-spacing*3 $container-spacing
 
   .right
     background-color: $light-gray
@@ -30,7 +30,7 @@
 
       .content
         float: left
-        padding: $small-spacing*3 0 $small-spacing*3 $base-spacing
+        padding: $small-spacing*3 $container-spacing $small-spacing*3 $base-spacing
 
   &.promo-case
     position: relative
