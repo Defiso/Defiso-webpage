@@ -1,0 +1,34 @@
+.co-workers
+  background-color: $light-gray
+
+.co-workers-container
+  @extend %container
+  padding-top: $base-spacing
+  padding-bottom: $base-spacing
+
+  .co-worker
+    +gallery(6 of 12)
+    margin-bottom: $base-spacing
+
+    +breakpoint($medium-screen)
+      +gallery(4 of 12)
+
+    +breakpoint($large-screen)
+      +gallery(3 of 12)
+
+    .name,
+    .email,
+    .phone,
+    .title
+      display: block
+
+    .name
+      font-weight: $bold-font-weight
+
+    .email
+      color: $base-font-color
+      font-weight: $base-font-weight
+
+      &:hover,
+      &:focus
+        color: lighten($base-font-color, 20%)

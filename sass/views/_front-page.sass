@@ -20,7 +20,6 @@
 
     .form-group input
       margin-top: $small-spacing
-      box-shadow: $base-box-shadow
 
 .reporting
   @extend %container
@@ -55,43 +54,3 @@
         +centerer(false, true)
         right: 0
         width: span(8 last)
-
-.contact
-  +clearfix
-  background-position: right
-  background-size: cover
-  background-repeat: no-repeat
-  padding: $base-spacing
-
-  +breakpoint($medium-screen)
-    padding: $base-spacing*3 0
-
-  .inner
-    @extend %container
-
-  .contact-header
-    +box-header
-
-  .contact-card
-    +span(full)
-    background-color: white
-    padding: $base-spacing
-
-    +breakpoint($medium-screen)
-      +span(16)
-
-    .contact-information,
-    .contact-form
-      +span(full)
-
-      +breakpoint($medium-screen)
-        +span(12)
-
-        &:last-child
-          +span(12 last)
-
-      textarea
-        min-height: 113px
-
-      button
-        @extend %cta-button

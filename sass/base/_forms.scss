@@ -29,6 +29,7 @@ textarea {
 select[multiple] {
   background-color: $light-gray;
   border-radius: 0;
+  border: none;
   box-sizing: border-box;
   margin-bottom: 0.625em;
   padding: $base-spacing / 3;

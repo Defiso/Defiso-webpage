@@ -45,7 +45,7 @@
 
     &:hover,
     &:focus {
-      background-color: lighten($pink, 20%);
+      background-color: shade($pink, 15%);
     }
   }
 
