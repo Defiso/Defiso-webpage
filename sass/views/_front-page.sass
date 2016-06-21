@@ -24,7 +24,8 @@
 
 .reporting
   @extend %container
-  padding: $base-spacing 0
+  padding-top: $base-spacing
+  padding-bottom: $base-spacing
 
   .reporting-header
     +box-header
@@ -61,7 +62,8 @@
   background-position: right
   background-size: cover
   background-repeat: no-repeat
-  padding: $base-spacing
+  padding-top: $base-spacing
+  padding-bottom: $base-spacing
 
   +breakpoint($medium-screen)
     padding: $base-spacing*3 0
@@ -83,6 +85,8 @@
     .contact-information,
     .contact-form
       +span(full)
+      +breakpoint(max-width $medium-screen)
+      margin-top: $base-spacing
 
       +breakpoint($medium-screen)
         +span(12)
