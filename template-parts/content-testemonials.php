@@ -47,15 +47,24 @@
 
 			 <div class="seo-word-positions">
 	 			<h3>Sökordspositioner på Google</h3>
-	 			<div class="seo-info">
-	 				<span class="seo-word">Markis Södermalm</span>
-	 				<span class="seo-word-position">2</span>
-	 			</div>
-				<div class="seo-info">
-	 				<span class="seo-word">Markis Södermalm</span>
-	 				<span class="seo-word-position">2</span>
-	 			</div>
-	 		</div>
+				<?php
+
+				// check if the repeater field has rows of data
+				if( have_rows('search_terms') ):
+
+				 	// loop through the rows of data
+				    while ( have_rows('search_terms') ) : the_row(); ?>
+
+							<div class="seo-info">
+								<span class="seo-word"><?php echo the_sub_field('search_term'); ?></span>
+								<span class="seo-word-position"><?php echo the_sub_field('position'); ?></span>
+							</div>
+
+				    <?php endwhile;
+
+				endif;
+
+				?>
 			
 		</div>
 	</div><!-- .entry-content -->

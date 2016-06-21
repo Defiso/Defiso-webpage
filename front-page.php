@@ -126,7 +126,7 @@ get_header(); ?>
       </div>
 
       <div class="contact" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/contact-background.jpg')">
-        <div class="container">
+        <div class="inner">
           <div class="contact-card">
             <div class="contact-header">
               <img class="icon" src="<?php echo get_template_directory_uri(); ?>/icons/location.svg" alt="Kontorets placering">

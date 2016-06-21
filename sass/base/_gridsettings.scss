@@ -10,6 +10,8 @@ $susy: (
   box-sizing: border-box;
 }
 
-.container {
+%container {
   @include container;
+  padding-left: 15px;
+  padding-right: 15px;
 }

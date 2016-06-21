@@ -1,12 +1,9 @@
 <?php
+// Remove before production
 header("Access-Control-Allow-Origin: *");
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-
-
-
 
 /**
  * defisomedia functions and definitions.
@@ -140,6 +137,15 @@ function defisomedia_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'defisomedia_widgets_init' );
+
+/**
+ * Define thumnails
+ * name, width, height, crop
+ * @link https://developer.wordpress.org/reference/functions/add_image_size/
+ */
+
+add_image_size ( "co-workers", 250, 312, array( 'center', 'top' ) );
+
 
 /**
  * Enqueue scripts and styles.

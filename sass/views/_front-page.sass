@@ -23,7 +23,7 @@
       box-shadow: $base-box-shadow
 
 .reporting
-  +container
+  @extend %container
   padding: $base-spacing 0
 
   .reporting-header
@@ -65,6 +65,9 @@
 
   +breakpoint($medium-screen)
     padding: $base-spacing*3 0
+
+  .inner
+    @extend %container
 
   .contact-header
     +box-header
