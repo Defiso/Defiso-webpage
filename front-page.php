@@ -125,7 +125,8 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="contact" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/contact-background.jpg')">
+      <div class="google-maps" id="map"></div>
+      <div class="contact">
         <div class="inner">
           <div class="contact-card">
             <div class="contact-header">
@@ -134,7 +135,7 @@ get_header(); ?>
             </div>
             <div class="contact-information">
               <p>
-                Ring vår kundtjänst på 08-410 344 35 för en kostnadsfri SEO-rådgivning för ditt företag, eller om du har några frågor eller funderingar kring sökmotoroptimering i allmänhet.
+                Ring vår kundtjänst på <strong>08-410 344 35</strong> för en kostnadsfri SEO-rådgivning för ditt företag, eller om du har några frågor eller funderingar kring sökmotoroptimering i allmänhet.
               </p>
               <p>
                 Defiso Media<br>
@@ -148,7 +149,7 @@ get_header(); ?>
             <div class="contact-form">
               <form>
                 <input type="text" placeholder="Namn">
-                <input type="number" placeholder="Mobiltelefon">
+                <input type="tel" placeholder="Mobiltelefon">
                 <textarea placeholder="Meddelande"></textarea>
                 <button type="button">Skicka meddelande</button>
               </form>

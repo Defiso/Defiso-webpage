@@ -10,7 +10,4 @@ js/app.js
 js/app.js
 
 style.css.map
-
-*.map
-
-*.css
+style.css

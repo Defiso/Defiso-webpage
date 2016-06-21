@@ -4,8 +4,9 @@
     background-color: $light-gray
 
   .content
-    +container
-    padding: $base-spacing 0
+    @extend %container
+    padding-top: $base-spacing
+    padding-bottom: $base-spacing
 
   .header
     +box-header
