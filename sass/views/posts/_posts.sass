@@ -1,3 +1,14 @@
-.blog
-  .content-area
-    +container
+.blog-container
+  +container
+  padding: $base-spacing 0
+
+  article.post
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(16)
+      +push(4)
+
+    +breakpoint($large-screen)
+      +span(14)
+      +push(5)

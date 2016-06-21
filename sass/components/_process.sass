@@ -1,0 +1,38 @@
+.process
+  background-color: $light-gray
+
+  .content
+    +container
+
+  .header
+    +box-header
+
+  .header-center
+    +box-header(center)
+
+  .steps
+    +clearfix
+    padding: $base-spacing 0
+    margin-bottom: $base-spacing
+    border-bottom: $base-border
+
+    .step
+      +span(12)
+      text-align: center
+      margin-bottom: $small-spacing
+
+      &:nth-child(2n+2)
+        +span(12 last)
+
+      +breakpoint($medium-screen)
+        +span(3)
+        margin-bottom: 0
+
+        &:first-child
+          +push(3)
+
+        &:nth-child(2n+2)
+          +span(3)
+
+      span
+        display: block

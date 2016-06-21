@@ -41,8 +41,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "components/testomonials";
 @import "components/two-columns";
 @import "components/three-columns";
+@import "components/four-columns";
+@import "components/featured-cases";
 @import "components/promo-boxes";
 @import "components/contact-cta";
+@import "components/process";
 @import "components/footer";
 
 @import "layouts/default";
@@ -50,4 +53,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "views/front-page";
 @import "views/posts/posts";
 @import "views/posts/single";
+@import "views/posts/single-testemonials";
 @import "views/seo-result";

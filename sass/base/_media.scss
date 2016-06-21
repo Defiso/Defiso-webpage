@@ -6,4 +6,9 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+
+  &.media-align-center {
+    display: block;
+    margin: auto;
+  }
 }

@@ -63,14 +63,14 @@ get_header(); ?>
           <div class="clients">
           <?php foreach(get_field('testemonials') as $post_object): ?>
             <div class="client">
-              <img src="<?php echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post_object->ID)); ?>" alt="<?php echo get_the_title($post_object->ID) ?>" />
+              <img src="<?php echo get_field('logotype', $post_object->ID); ?>" alt="<?php echo get_the_title($post_object->ID) ?>" />
             </div>
   				<?php endforeach; ?>
           </div>
         </div>
       </div>
 
-      <div class="three-columns">
+      <div class="three-columns gray-bg">
         <div class="content">
           <div class="header">
             <img class="icon" src="<?php echo get_template_directory_uri(); ?>/icons/search.svg" alt="Sökmotoroptimering">
@@ -110,7 +110,7 @@ get_header(); ?>
         </div>
         <div class="reporting-content-container">
           <div class="reporting-image">
-            <img src="http://placehold.it/800x450">
+            <img src="http://placehold.it/800x450?text=screenshot">
           </div>
           <div class="reporting-text">
             <h3>Se hur många samtal du har fått</h3>

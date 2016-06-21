@@ -1,0 +1,49 @@
+.featured-cases
+  .column
+    float: left
+    margin: 0
+    padding: $base-spacing gutter() $base-spacing gutter()
+
+.three-columns.featured-cases .column
+  width: calc(100%/3)
+
+  &:nth-child(3n+2)
+    border-left: $base-border
+    border-right: $base-border
+
+  &:nth-child(1n+4)
+    border-top: $base-border
+    border-bottom: $base-border
+
+  &:nth-last-child(-n+3)
+    border-bottom: none
+
+.four-columns.featured-cases .column
+  width: calc(100%/4)
+
+  &:nth-child(4n+2)
+    border-left: $base-border
+
+  &:nth-child(4n+3)
+    border-left: $base-border
+    border-right: $base-border
+
+  &:nth-child(1n+5)
+    border-top: $base-border
+    border-bottom: $base-border
+
+  &:nth-last-child(-n+4)
+    border-bottom: none
+
+.featured-cases a.column
+  transition: background-color $base-duration $base-timing
+
+  &:hover
+    background-color: $light-gray
+
+  h3,
+  p
+    color: $base-font-color
+
+  p
+    font-weight: $base-font-weight

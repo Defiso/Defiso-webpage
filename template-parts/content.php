@@ -13,7 +13,7 @@
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
-				the_title('<h1 class="entry-title">','<h1>');
+				get_template_part( 'template-parts/elements/element', 'jumbotron' );
 			} else {
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
@@ -28,6 +28,10 @@
 
 	<div class="entry-content">
 		<?php
+			if ( has_post_thumbnail() ) {
+				echo the_post_thumbnail_url();
+			}
+
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'defisomedia' ), array( 'span' => array( 'class' => array() ) ) ),

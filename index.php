@@ -28,25 +28,43 @@ get_header(); ?>
 			<?php
 			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			if ( !is_single() ): ?>
+			<div class="jumbotron" <?php if ( get_field('jumbotron_background') ): ?> style="background-image: url('<?php echo get_field('jumbotron_background') ?>')" <?php endif; ?>>
+			  <div class="inner">
+			    <div class="content">
+			      <h1 class="entry-title">Nyheter</h1>
+						<p>
+							Nyheter och innlägg om Defiso och sökmotoroptimering
+						</p>
+			    </div>
+			  </div>
+			</div>
+			<?php endif; ?>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				<div class="blog-container">
 
-			endwhile;
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();
 
-			the_posts_navigation();
+					/*
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', get_post_format() );
 
-		else :
+				endwhile;
 
-			get_template_part( 'template-parts/content', 'none' );
+				the_posts_navigation();
 
-		endif; ?>
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif; ?>
+
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

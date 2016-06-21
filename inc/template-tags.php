@@ -139,8 +139,8 @@ if ( ! function_exists( 'seotool' ) ) {
               <button class="btn" onclick="analyze()">Analysera</button>
               <p class="error-text"></p>
             </div>
-          </form>          
-          
+          </form>
+
           <div class="row result_row">
             <div class="loader-placeholder">
             <img src="/wp-content/themes/defisomedia/inc/seotool/img/svg-loaders/puff.svg" id="loader"/>
@@ -150,5 +150,40 @@ if ( ! function_exists( 'seotool' ) ) {
         </div>
         <div class="result"> </div>
     ';
+  }
+}
+
+if ( ! function_exists( 'featured_quote_testemonials' ) ) {
+  /**
+   * Display featured testemonials with quote
+   * @since  1.0.0
+   * @return void
+   */
+  function featured_quote_testemonials() {
+		$testemonials = get_field('featured_quote_testemonials');
+		echo '
+					<div class="three-columns center">
+						<div class="content">
+							<div class="header-center">
+								<h2>Det här säger våra kunder</h2>
+							</div>
+							<hr>
+							<div class="columns">
+		';
+		foreach($testemonials as $post_object):
+			echo '
+						<div class="column">
+							<img src="' . get_field('logotype', $post_object->ID) . '" alt="' . get_the_title($post_object->ID) . '" />
+							<h3>' . get_the_title($post_object->ID) . '</h3>
+							<p>' . get_field('quote', $post_object->ID) . '</p>
+						</div>
+			';
+		endforeach;
+		echo '
+							</div>
+						</div>
+					</div>
+		';
+
   }
 }

@@ -6,10 +6,6 @@
     +container($container-width/2)
     padding: $base-spacing
 
-    .header,
-    .header-center
-      margin-bottom: $small-spacing
-
     .header
       +box-header
 
@@ -35,3 +31,43 @@
       .content
         float: left
         padding: $small-spacing*3 0 $small-spacing*3 $base-spacing
+
+  &.promo-case
+    position: relative
+    text-align: center
+
+    .left,
+    .right
+      background-color: $theme-color
+      color: white
+
+      .content
+        padding: $base-spacing*3 $base-spacing*1.5
+
+        .header h2
+          float: none
+
+        p
+          font-size: $h3-font-size
+          line-height: $heading-line-height
+
+        .button
+          background-color: white
+          color: $base-font-color
+
+          &:hover,
+          &:focus
+            background-color: transparentize(white, 0.2)
+
+    .case-image
+      position: absolute
+      top: 0
+      bottom: 0
+      background-size: cover
+      background-position: center
+
+    .left.case-image
+      left: 0
+
+    .right.case-image
+      right: 0

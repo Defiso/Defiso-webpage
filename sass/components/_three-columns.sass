@@ -1,5 +1,7 @@
 .three-columns
-  background-color: $light-gray
+
+  &.gray-bg
+    background-color: $light-gray
 
   &.center
     text-align: center
@@ -7,10 +9,6 @@
   .content
     +container
     padding: $base-spacing 0
-
-  .header,
-  .header-center
-    margin-bottom: $small-spacing
 
   .header
     +box-header

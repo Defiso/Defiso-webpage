@@ -1,0 +1,45 @@
+.single-testemonials .entry-content
+  +container
+  padding: $base-spacing 0 $small-spacing 0
+
+.testemonials-content
+  +span(full)
+
+  +breakpoint($medium-screen)
+    +span(16 last)
+
+.testemonials-info
+  +span(full)
+
+  +breakpoint($medium-screen)
+    +span(8)
+
+.seo-word-positions
+  +clearfix
+  background-color: $light-gray
+  padding: $small-spacing
+
+  .seo-info
+    +clearfix
+    display: block
+    padding-bottom: $small-spacing/2
+    margin-bottom: $small-spacing/2
+    border-bottom: $base-border
+
+    .seo-word
+      float: left
+      line-height: $base-spacing
+
+    .seo-word-position
+      float: right
+      background-color: $theme-color
+      height: $base-spacing
+      width: $base-spacing
+      border-radius: $small-spacing
+      text-align: center
+      line-height: $base-spacing
+      color: white
+
+    &:last-child
+      border-bottom: 0
+      margin-bottom: 0

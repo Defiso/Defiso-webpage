@@ -1,0 +1,29 @@
+.single-post
+  .entry-meta,
+  .entry-content,
+  .entry-footer
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(16)
+      +push(4)
+
+    +breakpoint($large-screen)
+      +span(14)
+      +push(5)
+
+  .entry-meta
+    margin-top: $base-spacing
+
+  .entry-footer
+    margin-bottom: $base-spacing
+
+.navigation.post-navigation
+  +container
+  margin-bottom: $base-spacing
+
+  .nav-previous
+    float: left
+
+  .nav-next
+    float: right
