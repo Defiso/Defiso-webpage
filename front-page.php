@@ -61,11 +61,31 @@ get_header(); ?>
         <div class="inner">
           <h2 class="base-weight-header">Etablerade nog för stora bolag. Små nog för att se varje kund.</h2>
           <div class="clients">
-          <?php foreach(get_field('featured_quote_testemonials') as $post_object): ?>
-            <div class="client">
-              <img src="<?php echo get_field('logotype', $post_object->ID); ?>" alt="<?php echo get_the_title($post_object->ID) ?>" />
-            </div>
-  				<?php endforeach; ?>
+
+            <?php if( have_rows('cases') ): ?>
+
+            <?php
+              // loop through the rows of data
+              while ( have_rows('cases') ) : the_row();
+
+                $image = get_sub_field('case_img');
+                $alt = $image['alt'];
+                $url = $image['url'];
+
+                // thumbnail
+                $size = 'frontpage-case-logo';
+                $thumb = $image['sizes'][ $size ];
+
+                ?>
+
+                <div class="client">
+                  <?php if( !empty($image) ): ?> <img src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>;"><?php endif; ?>
+                </div>
+
+              <?php endwhile; ?>
+
+            <?php endif; ?>
+
           </div>
         </div>
       </div>
