@@ -117,7 +117,7 @@ get_header(); ?>
               <p>
                 Resultatet är det enda som räknas – inte enbart rankning utan främst de affärer som genereras i slutändan. Till exempel mäter vi antalet samtal och förfrågningar du får in. SEO med Defiso Media ska alltid löna sig för dig som företagare.
               </p>
-              <a href="/resultat">Läs mer om vårt resultatfokus</a>
+              <a href="/process">Läs mer om vårt resultatfokus</a>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ get_header(); ?>
                 08-410 344 35<br>
                 <a href="mailto:info@defiso.se">info@defiso.se</a>
               </p>
-              <a href="/medarbetare" class="button">Kontakta våra medarbetare</a>
+              <a href="/kontakt#medarbatare" class="button">Kontakta våra medarbetare</a>
             </div>
             <div class="contact-form">
               <form>

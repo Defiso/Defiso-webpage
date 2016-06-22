@@ -27,7 +27,9 @@ get_header(); ?>
               <div class="contact-card">
                 <div class="contact-header">
                   <img class="icon" src="<?php echo get_template_directory_uri(); ?>/icons/location.svg" alt="Kontorets placering">
-                  <h1>Kontakta oss</h1>
+                  <?php
+                    the_title('<h1 class="entry-title">','</h1>');
+                  ?>
                 </div>
                 <div class="contact-information">
                   <p>
