@@ -1,5 +1,8 @@
 
 .seo-result
+  @extend %container
+  padding-top: $base-spacing
+
   header
     h2
       float: left
@@ -13,8 +16,39 @@
       span
         display: inline
 
-  .content
-    clear: left
+  .seo-info
+    +clearfix
 
-    ul
+    .website,
+    .content .info
+      +span(12)
+
+    .search-term,
+    .content .errors
+      +span(12 last)
+
+    .title
+      +clearfix
+
+      h2
+        float: left
+
+      .status
+        float: right
+        font-weight: $bold-font-weight
+
+        img
+          margin-right: $small-spacing/2
+          vertical-align: middle
+
+    .content .errors ul li
+      position: relative
+      padding-left: $base-spacing*1.25
+      margin-bottom: $small-spacing
       list-style-type: none
+      font-weight: $bold-font-weight
+
+      img
+        position: absolute
+        left: 0
+        top: -2px
