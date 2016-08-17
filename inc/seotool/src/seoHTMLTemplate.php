@@ -249,7 +249,7 @@ class seoHTMLTemplate{
               <h2>Titel</h2>
               <div class="status">
                 <img src="{$titlePass["image"]}" alt="Statusikon">
-                {$titlePass["error"]}{$titlePass["message"]}
+                <span>{$titlePass["error"]}{$titlePass["message"]}</span>
               </div>
             </header>
           </div>
@@ -277,7 +277,7 @@ class seoHTMLTemplate{
               <h2>Meta description</h2>
               <div class="status">
                 <img src="{$descriptionPass["image"]}" alt="Statusikon">
-                {$descriptionPass["error"]}{$descriptionPass["message"]}
+                <span>{$descriptionPass["error"]}{$descriptionPass["message"]}</span>
               </div>
             </header>
           </div>
@@ -304,7 +304,7 @@ class seoHTMLTemplate{
               <h2>Rubriker</h2>
               <div class="status">
                 <img src="{$headlinePass["image"]}" alt="Statusikon">
-                {$headlinePass["error"]}{$headlinePass["message"]}
+                <span>{$headlinePass["error"]}{$headlinePass["message"]}</span>
               </div>
             </header>
           </div>
@@ -333,7 +333,7 @@ class seoHTMLTemplate{
               <h2>Brödtext</h2>
               <div class="status">
                 <img src="{$textPass["image"]}" alt="Statusikon">
-                {$textPass["error"]}{$textPass["message"]}
+                <span>{$textPass["error"]}{$textPass["message"]}</span>
               </div>
             </header>
           </div>
@@ -378,7 +378,7 @@ class seoHTMLTemplate{
               <h2>Bilder</h2>
               <div class="status">
                 <img src="{$imagesPass["image"]}" alt="Statusikon">
-                {$imagesPass["error"]}{$imagesPass["message"]}
+                <span>{$imagesPass["error"]}{$imagesPass["message"]}</span>
               </div>
             </header>
           </div>
@@ -406,7 +406,7 @@ class seoHTMLTemplate{
               <h2>Domännamn</h2>
               <div class="status">
                 <img src="{$domainPass["image"]}" alt="Statusikon">
-                {$domainPass["error"]}{$domainPass["message"]}
+                <span>{$domainPass["error"]}{$domainPass["message"]}</span>
               </div>
             </header>
           </div>

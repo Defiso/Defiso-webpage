@@ -56,7 +56,7 @@
     loader.css("display", "block");
 		setTimeout(function(){
 		  timeLeft.text('Vänta lite till');
-		}, 3000);
+		}, 5000);
 
  $.ajax({
       method: "POST",
