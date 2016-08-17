@@ -1,7 +1,10 @@
+#loader
+  margin: $base-spacing 0
 
 .seo-result
   @extend %container
   padding-top: $base-spacing
+  padding-bottom: $base-spacing
 
   header
     h2
@@ -19,13 +22,20 @@
   .seo-info
     +clearfix
 
-    .website,
-    .content .info
+    .content
+    +clearfix
+
+    .left
+      clear: right
       +span(12)
 
-    .search-term,
-    .content .errors
+    .right
       +span(12 last)
+
+    .left,
+    .right
+      &:nth-child(1n+3)
+        margin-top: $base-spacing
 
     .title
       +clearfix
@@ -41,7 +51,7 @@
           margin-right: $small-spacing/2
           vertical-align: middle
 
-    .content .errors ul li
+    .errors li
       position: relative
       padding-left: $base-spacing*1.25
       margin-bottom: $small-spacing
@@ -52,3 +62,37 @@
         position: absolute
         left: 0
         top: -2px
+
+    .rating
+      // span one-fifth
+      +span(4)
+
+      &:nth-child(6n+6)
+        +span(4 last)
+
+    span.result
+      @extend h2
+
+    .word-density
+      dt
+        @extend h3
+        font-weight: $bold-font-weight
+
+      dd
+        @extend h2
+        margin-bottom: $small-spacing
+
+    .top-words
+      dt,
+      dd
+        float: left
+        width: 50%
+        margin-bottom: $small-spacing/2
+
+      dt
+        margin-top: $small-spacing/2
+
+      .result-bar
+        padding: $small-spacing/2
+        color: white
+        font-weight: $bold-font-weight

@@ -14,8 +14,25 @@
 			<div class="entry-content">
 
         <div class="seo-target">
-          <img id="loader" src="<?php echo get_template_directory_uri();?>/inc/seoTool/src/img/svg-loaders/puff.svg">
+					<div id="loader">
+						<img src="<?php echo get_template_directory_uri();?>/inc/seoTool/src/img/svg-loaders/puff.svg">
+						<h3 id="timeLeft">Snart klar</h3>
+						<h2>Analyserar din hemsida</h2>
+					</div>
         </div>
+
+				<div class="contact-cta">
+					<div class="inner">
+						<div class="header">
+							<h3>Vill du förbättra din närvaro på nätet? Kontakta oss!</h3>
+						</div>
+						<form>
+							<input type="text" name="name" placeholder="Namn">
+							<input type="text" name="name" placeholder="Telefonnummer">
+							<button type="button" name="button">Skicka</button>
+						</form>
+					</div>
+				</div>
 
       </div>
     </article>
@@ -26,14 +43,21 @@
 <script>
   $(document).ready(function () {
     var url = "<?php echo (isset($_POST["url"])) ? $_POST["url"] :"";?>";
-    var keywords = "<?php echo (isset($_POST["keywords"])) ? $_POST["keywords"] :"";?>"
+    var keywords = "<?php echo (isset($_POST["keywords"])) ? $_POST["keywords"] :"";?>";
     var email = "<?php echo (isset($_POST["email"])) ? $_POST["email"] :"";?>";
     var inputs = {
       "url": url,
       "keywords": keywords,
       "email": email
     };
-     $("#loader").css("display", "block");
+		var loader = $("#loader");
+		var timeLeft = $("#timeLeft");
+
+    loader.css("display", "block");
+		setTimeout(function(){
+		  timeLeft.text('Vänta lite till');
+		}, 3000);
+
  $.ajax({
       method: "POST",
       url: "<?php echo get_template_directory_uri();?>/inc/seoTool/analyze.php",

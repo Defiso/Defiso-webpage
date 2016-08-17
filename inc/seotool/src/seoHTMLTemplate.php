@@ -126,12 +126,12 @@ class seoHTMLTemplate{
         $width = $x * $value;
 
         $topFiveWords .= '
-            <dt style="float: left; font-weight: 700; padding: 4px; width: 100px;">'.trim($word).'</dt>
-              <dd>
-                <div id="data-one" class="bar" style="width: '.$width.'px; margin-bottom: 10px; margin-left: 110px; color: #fff; text-align: center; background: #fdc689; padding: 4px;" align="center">
+            <dt>'.trim($word).'</dt>
+            <dd>
+              <div id="data-' . $word . '" class="result-bar" style="width: '.$width.'px; background: #fdc689;">
                 '.$value.'
-                </div>
-             </dd>';
+              </div>
+            </dd>';
       }
 
       /*Headinlines*/
@@ -204,19 +204,41 @@ class seoHTMLTemplate{
       <div class="seo-result content">
 
         <div class="seo-info">
-          <div class="website">
+          <div class="left">
             <h2>Hemsida</h2>
             <a href="http://{$url}" target="_blank">{$url}</a>
           </div>
-          <div class="search-term">
+          <div class="right">
             <h2>Sökord</h2>
             {$keywords}
           </div>
-          {$loadingResult}
-          {$domainAge}
-          {$mobileFriendly}
-          {$mobileScore}
-          {$CMS}
+        </div>
+
+        <hr>
+
+        <div class="seo-info">
+          <div class="content">
+            <div class="rating">
+              <h3>Laddningstid</h3>
+              <span class="result">{$loadingResult}</span>
+            </div>
+            <div class="rating">
+              <h3>Domänålder</h3>
+              <span class="result">{$domainAge}</span>
+            </div>
+            <div class="rating">
+              <h3>Mobilvänlig</h3>
+              <span class="result">{$mobileFriendly}</span>
+            </div>
+            <div class="rating">
+              <h3>Mobilpoäng</h3>
+              <span class="result">{$mobileScore}</span>
+            </div>
+            <div class="rating">
+              <h3>CMS</h3>
+              <span class="result">{$CMS}</span>
+            </div>
+          </div>
         </div>
 
         <hr>
@@ -232,13 +254,13 @@ class seoHTMLTemplate{
             </header>
           </div>
           <div class="content">
-            <div class="info">
+            <div class="left">
               <p>
                 Alla webbsidor ska ha en titel. I en sökmotors ögon är titeln det viktigaste för att bedöma vad en webbsida handlar om och för vilka sökord sidan ska rankas högt på. Titeln bör vara maximalt 60 tecken lång och innehålla sökordet, men maximalt två gånger. Sökordet bör komma så tidigt som möjligt i titeln.
               </p>
             </div>
-            <div class="errors">
-              <ul>
+            <div class="right">
+              <ul class="errors">
                 <li><img src="{$pageContainsOnlyOneH1Tag["image"]}"> {$pageContainsOnlyOneH1Tag["message"]}</li>
                 <li><img src="{$titleContainKeyword["image"]}"> {$titleContainKeyword["message"]}</li>
                 <li><img src="{$titleNotToLong["image"]}">{$titleNotToLong["message"]}</li>
@@ -260,13 +282,13 @@ class seoHTMLTemplate{
             </header>
           </div>
           <div class="content">
-            <div class="info">
+            <div class="left">
               <p>
                 Meta description är det första en potentiell kund läser om ditt företag och texten bör vara både informativ och säljande. Description är inte avgörande för optimeringen men man bör ändå ha med sökordet. Description bör vara maximalt 155 tecken lång.
               </p>
             </div>
-            <div class="errors">
-              <ul>
+            <div class="right">
+              <ul class="errors">
                 <li><img src="{$descriptionContainsKeywords["image"]}"> {$descriptionContainsKeywords["message"]}</li>
                 <li><img src="{$descriptionNoToLong["image"]}"> {$descriptionNoToLong["message"]}</li>
               </ul>
@@ -287,13 +309,13 @@ class seoHTMLTemplate{
             </header>
           </div>
           <div class="content">
-            <div class="info">
+            <div class="left">
               <p>
                 Rubriker är en viktig signal till sökmotorer om vad en sida handlar om. Viktigast av allt är huvudrubriken, H1, som bör innehålla sökordet så tidigt som möjligt. Det är även bra om sökordet finns med i någon av underrubrikern (H2, H3, osv). Man bör dock inte spamma och använda sökordet i varenda rubrik.
               </p>
             </div>
-            <div class="errors">
-              <ul>
+            <div class="right">
+              <ul class="errors">
                 <li><img src="{$pageContainsOnlyOneH1Tag["image"]}"> {$pageContainsOnlyOneH1Tag["message"]}</li>
                 <li><img src="{$H1TagsContainsKeyword["image"]}"> {$H1TagsContainsKeyword["message"]}</li>
                 <li><img src="{$keywordAppearsInHeadlines["image"]}"> {$keywordAppearsInHeadlines["message"]}</li>
@@ -316,22 +338,35 @@ class seoHTMLTemplate{
             </header>
           </div>
           <div class="content">
-            <div class="info">
+            <div class="left">
               <p>
                 En väloptimerad sida bör innehålla minst 400 ord relevant text kring sökordet man vill ranka på. Någon övre gräns finns egentligen inte. Exakt hur många gånger sökordet bör förekomma i texten går inte att säga, men texten måste vara naturligt skriven och inte spammig. Ha gärna sökordet i kursiv stil, fetstil eller understruket någon gång i texten.
               </p>
             </div>
-            <div class="errors">
-              <ul>
+            <div class="right">
+              <ul class="errors">
                 <li><img src="{$totalWordCount["image"]}"> {$totalWordCount["message"]}</li>
                 <li><img src="{$density["image"]}"> {$density["message"]}</li>
                 <li><img src="{$keywordsAreNotEmphasized["image"]}"> {$keywordAppearsMoreThenFiveTimes["message"]}</li>
                 <li><img src="{$keywordsAppearsInText["image"]}"> {$keywordsAppearsInText["message"]}</li>
               </ul>
             </div>
-            <p>
-              {$topFiveWords}
-            </p>
+            <div class="left">
+              <dl class="word-density">
+                <dt>Antal ord på sidan</dt>
+                <dd>{$wordCount}</dd>
+                <dt>Sökord förekommer i texten</dt>
+                <dd>{$keywordAppearenceCount}</dd>
+                <dt>Sökordsdensitet</dt>
+                <dd>{$keywordDensity}</dd>
+              </dl>
+            </div>
+            <div class="right">
+              <h3>Top 5 ord på sidan</h3>
+              <dl class="top-words">
+                {$topFiveWords}
+              </dl>
+            </div>
           </div>
         </div>
 
@@ -348,13 +383,13 @@ class seoHTMLTemplate{
             </header>
           </div>
           <div class="content">
-            <div class="info">
+            <div class="left">
               <p>
                 Att använda sig av ALT-tagg på bilder är viktigt för både bildsöket och det vanliga sökresultatet. Alla bilder på en sida bör ha ALT-tagg och sökordet bör finnas med i ALT-taggen på minst en av bilderna. Välj bild med omsorg då ALT-taggen ska beskriva bilden. Det är även ett plus om sökordet finns med i filnamnet på någon bild.
               </p>
             </div>
-            <div class="errors">
-              <ul>
+            <div class="right">
+              <ul class="errors">
                 <li><img src="{$imagesAltContainsKeyword["image"]}"> {$imagesAltContainsKeyword["message"]}</li>
                 <li><img src="{$imagesAltMissingCount["image"]}"> {$imagesAltMissingCount["message"]}</li>
                 <li><img src="{$imagesFilenameContainsKeyword["image"]}"> {$imagesFilenameContainsKeyword["message"]}</li>
@@ -376,13 +411,13 @@ class seoHTMLTemplate{
             </header>
           </div>
           <div class="content">
-            <div class="info">
+            <div class="left">
               <p>
                 Domännamnet har en viss påverkan på optimeringen. Det bör inte vara för långt och krånligt och det får gärna innehålla det aktuella sökordet. Domännament bör helst inte innehålla bindestreck.
               </p>
             </div>
-            <div class="errors">
-              <ul>
+            <div class="right">
+              <ul class="errors">
                 <li><img src="{$domainContainSeperator["image"]}"> {$domainContainSeperator["message"]}</li>
                 <li><img src="{$domainNameContainsKeywords["image"]}"> {$domainNameContainsKeywords["message"]}</li>
                 <li><img src="{$canonicalPass["image"]}"> {$canonicalPass["message"]}</li>
