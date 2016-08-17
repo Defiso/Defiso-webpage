@@ -138,13 +138,7 @@ get_header(); ?>
               <?php echo the_field('contact_text'); ?>
             </div>
             <div class="contact-form">
-              <form>
-                <input type="text" placeholder="Namn">
-                <input type="tel" placeholder="Mobiltelefon">
-                <textarea placeholder="Meddelande"></textarea>
-                <button type="button">Skicka meddelande</button>
-              </form>
-              <?php echo the_field('contact_form'); ?>
+              <?php echo do_shortcode('[contact-form-7 id="193" title="Kontaktformulär"]'); ?>
             </div>
           </div>
         </div>

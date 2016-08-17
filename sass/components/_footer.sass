@@ -14,7 +14,9 @@ footer.site-footer
 
   .menu-sidfot-container
     +clearfix
-    +span(16 of 24)
+
+    +breakpoint($medium-screen)
+      +span(16 of 24)
 
   li
     list-style: none
@@ -27,15 +29,25 @@ footer.site-footer
     &:focus
       color: white
 
-  #footer > li > a
-    border-bottom: $footer-border
+  #footer > li
+    +breakpoint(max-width $medium-screen)
+      margin-bottom: $small-spacing
+
+    > a
+      border-bottom: $footer-border
 
   .menu-item-has-children
-    +gallery(8 of 16)
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +gallery(8 of 16)
 
   .company-information
-    +span(last 8 of 24)
+    +span(full)
     color: $footer-color
+
+    +breakpoint($medium-screen)
+      +span(last 8 of 24)
 
     .header
       border-bottom: $footer-border

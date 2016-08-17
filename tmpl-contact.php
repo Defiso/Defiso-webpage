@@ -44,12 +44,7 @@ get_header(); ?>
                   </p>
                 </div>
                 <div class="contact-form">
-                  <form>
-                    <input type="text" placeholder="Namn">
-                    <input type="tel" placeholder="Mobiltelefon">
-                    <textarea placeholder="Meddelande"></textarea>
-                    <button type="button">Skicka meddelande</button>
-                  </form>
+                  <?php echo do_shortcode('[contact-form-7 id="193" title="Kontaktformulär"]'); ?>
                 </div>
               </div>
             </div>

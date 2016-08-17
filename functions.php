@@ -150,7 +150,6 @@ add_image_size ( "co-workers", 250, 312, array( 'center', 'top' ) );
 add_image_size ( "frontpage-case-logo", 250, 312, false );
 add_image_size ( "frontpage-reporting", 800, 450, false );
 
-
 /**
  * Enqueue scripts and styles.
  */

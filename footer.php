@@ -51,6 +51,8 @@
 					  streetViewControl: false,
 					  rotateControl: false,
 					  fullscreenControl: false,
+						draggable: false,
+						zoomControl: false,
 
             // The latitude and longitude to center the map (always required)
             center: new google.maps.LatLng(59.335607, 18.040728),

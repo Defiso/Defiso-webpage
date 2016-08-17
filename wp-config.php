@@ -65,18 +65,18 @@ define('NONCE_SALT',       '-v++vZAe1!z1fnBvCilf6Npmb!]p{|1?at%xOR#04&sEb,`oi}~#
  */
 $table_prefix  = 'dm_';
 
-/** 
- * För utvecklare: WordPress felsökningsläge. 
- * 
- * Ändra detta till true för att aktivera meddelanden under utveckling. 
- * Det är rekommderat att man som tilläggsskapare och temaskapare använder WP_DEBUG 
- * i sin utvecklingsmiljö. 
+/**
+ * För utvecklare: WordPress felsökningsläge.
  *
- * För information om andra konstanter som kan användas för felsökning, 
- * se dokumentationen. 
- * 
+ * Ändra detta till true för att aktivera meddelanden under utveckling.
+ * Det är rekommderat att man som tilläggsskapare och temaskapare använder WP_DEBUG
+ * i sin utvecklingsmiljö.
+ *
+ * För information om andra konstanter som kan användas för felsökning,
+ * se dokumentationen.
+ *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
- */ 
+ */
 define('WP_DEBUG', true);
 
 /* Det var allt, sluta redigera här! Blogga på. */

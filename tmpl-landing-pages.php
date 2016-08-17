@@ -30,30 +30,20 @@ get_header(); ?>
 			        <div class="content">
 			          <div class="header">
 			            <img class="icon" src="<?php echo get_template_directory_uri(); ?>/icons/search.svg" alt="Sökmotoroptimering">
-			            <h2>Varför landningssidor med Defiso?</h2>
+			            <h2><?php echo get_field('landingpage_header') ?></h2>
 			          </div>
 			          <div class="columns">
 			            <div class="column">
 			              <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/telescope.svg" alt="Teleskop">
-			              <h3>Alla söker på nätet</h3>
-			              <p>
-			                Sökmotorer är numera det självklara alternativet för att snabbt och effektivt hitta speciella produkter eller tjänster. Undersökningar visar att 90 procent av alla internetanvändare använder sig av sökmotorer för att hitta den information de söker.
-			              </p>
+			              <?php echo get_field('landingpage_first_column') ?>
 			            </div>
 			            <div class="column">
 			              <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/rocket.svg" alt="Raket">
-			              <h3>En kraftfull försäljningskanal</h3>
-			              <p>
-			                Med sökmotoroptimering når du potentiella i kunder i ett kritiskt skede - mitt i köpprocessen när de precis sökt efter efter en produkt eller tjänst. 75 procent av de beställningar och förfrågningar som sker på hemsidor kommer via sökmotorer.
-			              </p>
+			              <?php echo get_field('landingpage_first_column') ?>
 			            </div>
 			            <div class="column">
 			              <img class="illustration" src="<?php echo get_template_directory_uri(); ?>/illustrations/moon-landing.svg" alt="Månlandning">
-			              <h3>Alla söker på nätet</h3>
-			              <p>
-			                Resultatet är det enda som räknas – inte enbart rankning utan främst de affärer som genereras i slutändan. Till exempel mäter vi antalet samtal och förfrågningar du får in. SEO med Defiso Media ska alltid löna sig för dig som företagare.
-			              </p>
-			              <a href="/resultat">Läs mer om vårt resultatfokus</a>
+			              <?php echo get_field('landingpage_first_column') ?>
 			            </div>
 			          </div>
 			        </div>

@@ -31,14 +31,9 @@ get_header(); ?>
 								<div class="columns">
 									<div class="column">
 										<div class="header">
-											<h2>Var på topp och öka försäljningen</h2>
+											<h2><?php echo get_field('seo_intro_title') ?></h2>
 										</div>
-										<p>
-											Att synas i sökmotorer - och då framförallt Google - blir allt viktigare för alla typer av företag. Syns man inte i sökmotorerna tappar man potentiella kunder – det är den enkla sanningen.
-										</p>
-										<p>
-												Det är här sökmotoroptimering, SEO, kommer in i bilden. Vi på Defiso Media arbetar med att ta fram skräddarsydda SEO-lösningar för företag i alla tänkbara branscher. Oavsett om ditt företag är litet eller stort, och oavsett vilket verksamhetsområdet är, så kan vi hjälpa dig att klättra mot toppen i sökresultaten.
-										</p>
+										<?php echo get_field('seo_intro_text') ?>
 									</div>
 									<div class="column">
 										<img src="<?php echo get_template_directory_uri(); ?>/illustrations/rocket.svg" alt="Raket">
@@ -50,38 +45,20 @@ get_header(); ?>
 						<div class="three-columns gray-bg">
 							<div class="content">
 								<div class="header-center">
-									<h2>Så här arbetar vi</h2>
+									<h2><?php echo get_field('work_method_title') ?></h2>
 								</div>
 								<div class="columns">
 									<div class="column">
 										<img src="<?php echo get_template_directory_uri(); ?>/icons/seo-analysis.svg" alt="Analysen">
-										<h3>Analysen</h3>
-										<p>
-											Vi utför en noggrann analys av de sökord du vill ranka på och din egen hemsida. Därefter gör vi en realistisk bedömning av vad som är genomförbart inom en rimlig tidsram och återkommer med en offert.
-										</p>
-										<p>
-											Offerten är kostnadsfri och ej bindande. En viktig faktor att tänka på när du beställer sökoptimering är att resultaten aldrig är omedelbara.
-										</p>
+										<?php echo get_field('work_method_first_column') ?>
 									</div>
 									<div class="column">
 										<img src="<?php echo get_template_directory_uri(); ?>/icons/seo-continuity.svg" alt="Långsiktigheten">
-										<h3>Långsiktigheten</h3>
-										<p>
-											Sökmotoroptimering är ett område i ständig förändring. Arbetet är kontinuerligt och kräver en löpande insats för att behålla den ranking du uppnått.
-										</p>
-										<p>
-											Vi tänker långsiktigt och engagerar oss personligen i dina resultat. Målet är att du som kund ska vara nöjd med tjänsten och fortsätta att samarbeta med oss.
-										</p>
+										<?php echo get_field('work_method_second_column') ?>
 									</div>
 									<div class="column">
 										<img src="<?php echo get_template_directory_uri(); ?>/icons/seo-overview.svg" alt="Överblicken">
-										<h3>Överblicken</h3>
-										<p>
-											I tjänsten ingår en översyn och optimering av din egen sajt, vilket är en förutsättning för att lyckas med sökoptimeringen. Det innefattar saker som gör hemsidan lättare för Google att identifiera och ranka.
-										</p>
-										<p>
-											Du väljer själv om du vill ha konsultation och utföra ändringarna själv eller om du vill överlåta allt till oss.
-										</p>
+										<?php echo get_field('work_method_third_column') ?>
 									</div>
 								</div>
 							</div>

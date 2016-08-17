@@ -81,3 +81,38 @@ select {
   max-width: 100%;
   width: auto;
 }
+
+.wpcf7-form {
+  p {
+    margin-bottom: 0;
+  }
+
+  input[type="submit"] {
+    @extend button.block-button;
+    @extend button%cta-button;
+    width: 100%;
+  }
+
+  span {
+    &:hover {
+      border-color: shade($base-border-color, 20%);
+      box-shadow: $base-box-shadow;
+    }
+
+    &:focus {
+      border-color: $action-color;
+      box-shadow: $form-box-shadow-focus;
+      outline: none;
+    }
+  }
+
+  img {
+    display: none;
+  }
+
+  .wpcf7-response-output {
+    border: none;
+    margin: $small-spacing 0 0 0;
+    padding: 0;
+  }
+}
