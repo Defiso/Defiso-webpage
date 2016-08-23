@@ -1,7 +1,16 @@
 .page-template-default
+  .entry-header
+    margin-bottom: $base-spacing
+    
   .two-columns
     .content
       margin-bottom: $base-spacing
+      padding-top: 0
+      padding-bottom: 0
 
     &:nth-child(2n+3)
       background-color: $secondary-background-color
+
+      .content
+        padding-top: $base-spacing
+        padding-bottom: $base-spacing
