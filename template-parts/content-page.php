@@ -15,20 +15,24 @@
 	</header><!-- .entry-header -->
 
 	<?php if ('standard_tmpl_content_row') {
-		while ( have_rows('standard_tmpl_content_row') ) : the_row(); ?>
+		while ( have_rows('standard_tmpl_content_row') ) : the_row();
+			$title = get_sub_field('row_title');
+			$left_column = get_sub_field('row_left_column');
+			$right_column = get_sub_field('row_right_column');
+		?>
 			<div class="two-columns">
 				<div class="content">
-					<?php if (get_sub_field('row_title')): ?>
+					<?php if ($title): ?>
 						<div class="header">
-							<h2><?php the_sub_field('row_title') ?></h2>
+							<h2><?php echo $title; ?></h2>
 						</div>
 					<?php endif; ?>
 					<div class="columns">
 						<div class="column">
-							<?php the_sub_field('row_left_column') ?>
+							<?php echo $left_column; ?>
 						</div>
 						<div class="column">
-							<?php the_sub_field('row_right_column') ?>
+							<?php echo $right_column; ?>
 						</div>
 					</div>
 				</div>
