@@ -36,6 +36,7 @@
 		<?php endwhile;
 	} ?>
 
+	<?php if (get_the_content()): ?>
 	<div class="entry-content">
 		<?php
 			the_content();
@@ -46,6 +47,7 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+	<?php endif; ?>
 
 	<footer class="entry-footer">
 		<?php

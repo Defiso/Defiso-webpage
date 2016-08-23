@@ -1,16 +1,22 @@
 .page-template-default
   .entry-header
     margin-bottom: $base-spacing
-    
+
   .two-columns
     .content
       margin-bottom: $base-spacing
       padding-top: 0
       padding-bottom: 0
 
+    // every second should be grey (+3 as entry-header is in the same container)
     &:nth-child(2n+3)
       background-color: $secondary-background-color
 
       .content
         padding-top: $base-spacing
         padding-bottom: $base-spacing
+
+    // avoid margin over entry-footer
+    &:nth-last-child(2)
+      .content
+        margin-bottom: 0
