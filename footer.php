@@ -277,7 +277,8 @@
         // Let's also add a marker while we're at it
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(59.335647, 18.058565),
-            map: map
+            map: map,
+            title: 'Defiso Media'
         });
     }
 </script>
