@@ -1,9 +1,13 @@
+$menu-duration: $base-duration*1.5
+
 .site-header
   background-color: rgba($theme-color, 0.9)
   padding: $small-spacing 0
   position: fixed
   width: 100%
   z-index: $z-index-menu
+  left: 0
+  transition: left $menu-duration $base-timing
 
   .inner
     @extend %container
@@ -19,6 +23,7 @@
 
   #openMenu
     padding: 0
+    outline: 0
 
     @extend %no-button-styling
 

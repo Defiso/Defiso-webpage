@@ -58,6 +58,11 @@ $menu-width: 250px
       left: 0
       background: rgba(0, 0, 0, 0.35)
 
+.off-canvas-active .site-header
+  left: -$menu-width
+  transition: left $menu-duration $base-timing
+
+
 #wrapperBackground
   z-index: $z-index-background
   background: rgba(0, 0, 0, 0)
