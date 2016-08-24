@@ -21,6 +21,26 @@
 					</div>
         </div>
 
+				<div class="modal" id="modal-opener">
+		      <input class="modal-state" id="seo-modal" type="checkbox">
+		      <div class="modal-fade-screen">
+		        <div class="modal-inner">
+		          <div class="modal-close" for="seo-modal"></div>
+							<div class="modal-image">
+								<img src="<?php echo get_template_directory_uri(); ?>/illustrations/moon-landing.svg" alt="Månlandning">
+							</div>
+							<div class="modal-form">
+								<h2>Vill du öka din synlighet på Google och andra sökmotorer? Kontakta oss!</h2>
+								<form>
+									<input type="text" name="name" placeholder="Namn">
+									<input type="text" name="name" placeholder="Telefonnummer">
+									<button type="button" name="button">Skicka</button>
+								</form>
+							</div>
+		        </div>
+		      </div>
+		    </div>
+
 				<div class="contact-cta">
 					<div class="inner">
 						<div class="header">

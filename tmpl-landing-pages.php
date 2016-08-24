@@ -50,14 +50,14 @@ get_header(); ?>
 			      </div>
 
 						<?php if ( have_rows('landingpage_repeatable_columns') ): ?>
-							<div class="three-columns gray-bg">
-								<div class="content">
-									<div class="columns">
-										<?php while ( have_rows('landingpage_repeatable_columns') ) : the_row();
-											$first_column = get_sub_field('landingpage_repeatable_first_column');
-											$second_column = get_sub_field('landingpage_repeatable_second_column');
-											$third_column = get_sub_field('landingpage_repeatable_third_column');
-										?>
+							<?php while ( have_rows('landingpage_repeatable_columns') ) : the_row();
+								$first_column = get_sub_field('landingpage_repeatable_first_column');
+								$second_column = get_sub_field('landingpage_repeatable_second_column');
+								$third_column = get_sub_field('landingpage_repeatable_third_column');
+							?>
+								<div class="three-columns">
+									<div class="content">
+										<div class="columns">
 											<div class="column">
 												<?php echo $first_column; ?>
 											</div>
@@ -67,10 +67,10 @@ get_header(); ?>
 											<div class="column">
 												<?php echo $third_column;?>
 											</div>
-										<?php endwhile; ?>
+										</div>
 									</div>
 								</div>
-							</div>
+							<?php endwhile; ?>
 						<?php endif; ?>
 
 						<div class="two-columns">

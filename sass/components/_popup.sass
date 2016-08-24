@@ -1,0 +1,102 @@
+.modal
+
+  label
+    cursor: pointer
+    font-weight: normal
+    margin-bottom: 0
+
+  .modal-state
+    display: none
+
+  .modal-fade-screen
+    +position(fixed, 0 0 0 0)
+    background-color: rgba(0, 0, 0, 0.85)
+    opacity: 0
+    transition: opacity 0.25s ease
+    visibility: hidden
+    z-index: 99999
+
+    +breakpoint($large-screen)
+      padding-top: 10em
+
+  .modal-bg
+    +position(absolute, 0 0 0 0)
+    cursor: pointer
+
+  // Close icon
+  .modal-close
+    top: $small-spacing
+    right: $small-spacing
+    position: absolute
+    cursor: pointer
+    height: $base-font-size
+    width: $base-font-size
+    text-align: center
+    opacity: 0.35
+
+    &:before,
+    &:after
+      position: absolute
+      content: ' '
+      height: $base-font-size
+      width: 2px
+      background-color: $base-font-color
+
+    &:before
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
+
+  .modal-inner
+    background-color: #fff
+    margin: auto
+    max-height: 95%
+    overflow: auto
+    position: relative
+    top: 0.5em
+    transition: opacity 0.25s ease
+    width: 95%
+    padding: $base-spacing
+
+    +breakpoint($medium-screen)
+      max-height: 70%
+      width: 80%
+
+    +breakpoint($large-screen)
+      width: 60%
+
+  .modal-image
+    img
+      display: block
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: $base-spacing
+
+    +breakpoint($medium-screen)
+      position: absolute
+      left: $base-spacing
+      bottom: $base-spacing
+      width: calc(40% - 1.75em)
+
+      img
+        display: block
+        width: 100%
+        margin: 0
+
+  .modal-form
+    +breakpoint($medium-screen)
+      float: right
+      width: calc(60% - 1.75em)
+
+  .modal-state:checked + .modal-fade-screen
+    opacity: 1
+    visibility: visible
+
+.modal-open
+  overflow: hidden
+
+.modal-closed
+  overflow: auto
+
+// Based on code by Kasper Mikiewicz
