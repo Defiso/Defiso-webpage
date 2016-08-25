@@ -31,11 +31,7 @@
 							</div>
 							<div class="modal-form">
 								<h2>Vill du öka din synlighet på Google och andra sökmotorer? Kontakta oss!</h2>
-								<form>
-									<input type="text" name="name" placeholder="Namn">
-									<input type="text" name="name" placeholder="Telefonnummer">
-									<button type="button" name="button">Skicka</button>
-								</form>
+								<?php echo do_shortcode('[contact-form-7 id="279" title="CTA formulär, leads för telefonnummer"]'); ?>
 							</div>
 		        </div>
 		      </div>
@@ -46,11 +42,7 @@
 						<div class="header">
 							<h3>Vill du förbättra din närvaro på nätet? Kontakta oss!</h3>
 						</div>
-						<form>
-							<input type="text" name="name" placeholder="Namn">
-							<input type="text" name="name" placeholder="Telefonnummer">
-							<button type="button" name="button">Skicka</button>
-						</form>
+						<?php echo do_shortcode('[contact-form-7 id="279" title="CTA formulär, leads för telefonnummer"]'); ?>
 					</div>
 				</div>
 

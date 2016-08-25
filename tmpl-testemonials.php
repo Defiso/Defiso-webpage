@@ -80,11 +80,7 @@ get_header(); ?>
 								<div class="header">
 									<h3>Få kostnadsfri SEO-rådgivning</h3>
 								</div>
-								<form>
-									<input type="text" name="name" placeholder="Namn">
-									<input type="text" name="name" placeholder="Telefonnummer">
-									<button type="button" name="button">Skicka</button>
-								</form>
+								<?php echo do_shortcode('[contact-form-7 id="279" title="CTA formulär, leads för telefonnummer"]'); ?>
 							</div>
 						</div>
 
