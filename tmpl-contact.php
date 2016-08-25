@@ -76,7 +76,7 @@ get_header(); ?>
                         <span class="image"><?php if( !empty($image) ): ?> <img src="<?php echo $thumb; ?>" alt="<?php echo $alt ?>;"><?php endif; ?></span>
                         <span class="name"><?php echo the_sub_field('name'); ?></span>
                         <span class="title"><?php echo the_sub_field('job_title'); ?></span>
-                        <a class="email" href="<?php echo the_sub_field('email'); ?>"><?php echo the_sub_field('email'); ?></a>
+                        <a class="email" href="mailto:<?php echo the_sub_field('email'); ?>"><?php echo the_sub_field('email'); ?></a>
                         <span class="phone"><?php echo the_sub_field('phone'); ?></span>
                       </div>
 
