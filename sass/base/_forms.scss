@@ -32,7 +32,7 @@ select[multiple] {
   border: none;
   box-sizing: border-box;
   margin-bottom: 0.625em;
-  padding: $base-spacing / 3;
+  padding: 0.7em;
   transition: border-color box-shadow $base-duration $base-timing;
   width: 100%;
 
@@ -110,8 +110,10 @@ select {
     display: none;
   }
 
-  .wpcf7-response-output {
+  .wpcf7-response-output,
+  span.wpcf7-not-valid-tip {
     border: none;
+    box-shadow: none;
     margin: $small-spacing 0 0 0;
     padding: 0;
   }

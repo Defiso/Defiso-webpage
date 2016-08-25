@@ -17,12 +17,15 @@
     form
       +span(full)
 
+      .wpcf7-form-control-wrap
+        float: left
+
       input
         display: block
 
         +breakpoint($medium-screen)
-          display: inline-block
           width: auto
+          margin-right: $small-spacing
           margin-bottom: 0
 
       button
@@ -30,7 +33,16 @@
           display: block
           width: 100%
 
-
-
       button
         @extend %cta-button
+
+      span.wpcf7-not-valid-tip
+        text-align: left
+        margin-top: $small-spacing/2
+
+      .wpcf7-response-output
+        float: left
+        width: 100%
+        display: block
+        color: white
+        text-align: center
