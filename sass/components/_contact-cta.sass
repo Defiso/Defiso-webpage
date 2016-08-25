@@ -19,9 +19,14 @@
 
       .wpcf7-form-control-wrap
         float: left
+        width: 100%
+
+        +breakpoint($medium-screen)
+          width: auto
 
       input
         display: block
+        width: 100%
 
         +breakpoint($medium-screen)
           width: auto
