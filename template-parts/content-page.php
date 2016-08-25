@@ -23,9 +23,7 @@
 			<div class="two-columns">
 				<div class="content">
 					<?php if ($title): ?>
-						<div class="header">
-							<h2><?php echo $title; ?></h2>
-						</div>
+						<h2><?php echo $title; ?></h2>
 					<?php endif; ?>
 					<div class="columns">
 						<div class="column">
