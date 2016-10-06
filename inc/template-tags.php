@@ -128,9 +128,9 @@ if ( ! function_exists( 'seotool' ) ) {
           <strong>Håller din hemsida måttet SEO-mässigt? Testa direkt här.</strong>
           <form role="form" action='.$url.' class="text-center" method="POST">
             <div class="form-group">
-              <input id="url-input" type="text" value="http://" name="url" class="form-control" placeholder="Domän" required>
-              <input id="keyword-input" type="text" name="keywords" class="form-control" placeholder="Sökord" required>
-              <input id="email-input" type="email" name="email" class="form-control" placeholder="Email" required>
+              <input id="url-input" type="text" name="url" class="form-control" placeholder="Din hemsideadress" required>
+              <input id="keyword-input" type="text" name="keywords" class="form-control" placeholder="Sökord du vill synas på" required>
+              <input id="email-input" type="email" name="email" class="form-control" placeholder="Din e-postadress (för att skicka analysen)" required>
               <button class="btn" onclick="analyze()">Analysera</button>
               <p class="error-text"></p>
             </div>
