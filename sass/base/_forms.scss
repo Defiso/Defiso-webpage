@@ -30,13 +30,13 @@ select[multiple] {
   background-color: $light-gray;
   border-radius: 0;
   box-shadow: $base-box-shadow;
-  border: none;
+  border: $form-border;
   box-sizing: border-box;
   margin-bottom: 0.625em;
   padding: 0.7em;
   transition: border-color box-shadow $base-duration $base-timing;
   width: 100%;
-  
+
   &:hover {
     border-color: shade($base-border-color, 20%);
   }

@@ -35,6 +35,7 @@ $z-index-background: 4;
 $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
+$alt-medium-gray: #c2c2c2;
 $light-gray: #f4f5f5;
 $purple: #554d7c;
 $pink: #f36f6d;
@@ -49,6 +50,8 @@ $action-color: $purple;
 // Border
 $base-border-color: $medium-gray;
 $base-border: 1px solid $base-border-color;
+$secondary-border-color: $alt-medium-gray;
+$form-border: 1px solid $secondary-border-color;
 
 // Background Colors
 $base-background-color: #fff;
