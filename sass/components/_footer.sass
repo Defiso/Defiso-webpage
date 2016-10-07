@@ -32,12 +32,12 @@ footer.site-footer
     &:focus
       color: white
 
+  .sub-menu a
+    font-weight: $base-font-weight
+
   #footer > li
     +breakpoint(max-width $medium-screen)
       margin-bottom: $small-spacing
-
-    > a
-      border-bottom: $footer-border
 
   .menu-item-has-children
     +span(full)
@@ -52,5 +52,9 @@ footer.site-footer
     +breakpoint($medium-screen)
       +span(last 8 of 24)
 
-    .header
-      border-bottom: $footer-border
+  .company-information .header,
+  #footer > li > a
+    font-weight: $bold-font-weight
+    border-bottom: $footer-border
+    padding-bottom: 4px
+    margin-bottom: 5px
