@@ -12,13 +12,25 @@
       margin-bottom: $small-spacing
 
     .clients
-      +span(full)
+      +clearfix
+      text-align: center
 
       .client
-        +gallery(12)
+        display: inline-block
+        max-width: 48%
+        margin-right: 3%
+
+        &:last-child
+          margin-right: 0
 
         +breakpoint($medium-screen)
-          +gallery(8)
+          max-width: span(8)
+          margin-right: 2.32558%
+
+          &:last-child
+            margin-right: 0
 
         +breakpoint($large-screen)
-          +gallery(4)
+          display: inline-block
+          max-width: span(4)
+          margin-right: 2.32558%
