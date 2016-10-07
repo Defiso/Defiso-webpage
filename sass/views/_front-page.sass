@@ -6,17 +6,16 @@
   +breakpoint(max-width $medium-screen)
     background-position: 72% 50%
 
-
   .overlay
     position: absolute
-    background: rgba(0,0,0,0.45)
+    background: rgba(0, 0, 0, 0.45)
     top: 0
     right: 0
     bottom: 0
     left: 0
 
     +breakpoint($medium-screen)
-      background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%)
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, transparent 100%)
 
   .inner
     position: relative
@@ -26,6 +25,7 @@
 
       +breakpoint($medium-screen)
         +span(16)
+        color: $base-font-color
 
       +breakpoint($large-screen)
         +span(10)
