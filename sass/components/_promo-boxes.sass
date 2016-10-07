@@ -1,16 +1,21 @@
 .promo-boxes
-  +clearfix
+
+  +breakpoint($medium-screen)
+    +clearfix
 
   .left .content,
   .right .content
     +container($container-width/2)
-    padding: $container-spacing
+    padding: $container-spacing*2 $container-spacing
 
     .header
       +box-header
 
     .header-center
       +box-header(center)
+
+    p:last-child
+      margin-bottom: 0
 
   .left
     +breakpoint($medium-screen)
