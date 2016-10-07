@@ -51,10 +51,18 @@ get_header(); ?>
 
 							  while ( $testemonials -> have_posts() ) : $testemonials -> the_post();
 
+									$image = get_field('logotype', $post_object->ID);
+									$url = $image['url'];
+
+									// thumbnail
+									$size = 'case-logo';
+									$thumb = $image['sizes'][ $size ];
+
+
 									// check that the case isn't already featured
 									if ( !in_array($post->ID, $featured_testemonials_id) ): ?>
 										<a class="column" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-											<img src="<?php echo get_field('logotype') ?>" alt="<?php the_title(); ?>">
+											<img src="<?php echo $thumb ?>" alt="<?php the_title(); ?>">
 											<h3><?php the_title(); ?></h3>
 											<p>
 												<?php echo get_field('description') ?>
@@ -96,9 +104,15 @@ get_header(); ?>
 												<div class="columns">
 							';
 							foreach($featured_testemonials as $post_object):
+								$image = get_field('logotype', $post_object->ID);
+								$url = $image['url'];
+
+								// thumbnail
+								$size = 'case-logo';
+								$thumb = $image['sizes'][ $size ];
 								echo '
 											<div class="column">
-												<img src="' . get_field('logotype', $post_object->ID) . '" alt="' . get_the_title($post_object->ID) . '" />
+												<img src="' . $thumb . '" alt="' . get_the_title($post_object->ID) . '" />
 												<h3>' . get_the_title($post_object->ID) . '</h3>
 												<p>' . get_field('quote', $post_object->ID) . '</p>
 												<a class="button" href="' . get_permalink($post_object->ID) . '">Se case</a>

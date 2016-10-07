@@ -30,7 +30,7 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/illustrations/moon-landing.svg" alt="Månlandning">
 							</div>
 							<div class="modal-form">
-								<h2>Vill du öka din synlighet på Google och andra sökmotorer? Kontakta oss!</h2>
+								<h2>Vill du öka din synlighet på Google och andra sökmotorer? Låt oss kontakta dig!</h2>
 								<?php echo do_shortcode('[contact-form-7 id="279" title="CTA formulär, leads för telefonnummer"]'); ?>
 							</div>
 		        </div>

@@ -166,9 +166,17 @@ if ( ! function_exists( 'featured_quote_testemonials' ) ) {
 							<div class="columns">
 		';
 		foreach($testemonials as $post_object):
+
+      $image = get_field('logotype', $post_object->ID);
+      $url = $image['url'];
+
+      // thumbnail
+      $size = 'case-logo';
+      $thumb = $image['sizes'][ $size ];
+
 			echo '
 						<div class="column">
-							<img src="' . get_field('logotype', $post_object->ID) . '" alt="' . get_the_title($post_object->ID) . '" />
+							<img src="' . $thumb . '" alt="' . get_the_title($post_object->ID) . '" />
 							<h3>' . get_the_title($post_object->ID) . '</h3>
 							<p>' . get_field('quote', $post_object->ID) . '</p>
 						</div>

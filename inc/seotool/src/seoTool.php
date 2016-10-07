@@ -1,4 +1,4 @@
-<?php 
+<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -13,10 +13,10 @@ class seoTool{
     public $email;
     public $seoAnalyzer;
     public $seoReport;
-  
+
    public function __construct(){
      $this->url = isset($_POST["url"]) ? $_POST["url"] : "";
-     $this->email = isset($_POST["email"]) ? $_POST["email"] : ""; 
+     $this->email = isset($_POST["email"]) ? $_POST["email"] : "";
      $keywords = isset($_POST["keywords"]) ? explode(" ", $_POST["email"]) : array();
      if($keywords){
        foreach($keywords as $word){
@@ -26,7 +26,7 @@ class seoTool{
     $this->seoAnalyzer = new seoAnalyzer();
     $this->seoReport = new seoReport();
    }
-  
+
   public function StartAnalyze(){
     $this->seoAnalyzer->webpage = $this->url;
     $this->seoAnalyzer->keywords = $this->keywords;
@@ -41,16 +41,16 @@ class seoTool{
       $html = new seoHTMLTemplate();
       $html->analyze =  $this->seoReport->Analyze;
       echo $html->printHTMLReport();
-    
+
     }else{
        $this->ReportFailure();
     }
   }
 
-  
+
   /* if page not found, send error message */
   public function ReportFailure(){
-    echo "<h1> Sidan kunde inte hittas </h1>";
+    echo "<h1>Sidan du angav kunde tyvärr inte analyseras.</h1>";
   }
 
 }

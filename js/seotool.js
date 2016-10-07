@@ -15,11 +15,8 @@ $(document).ready( function(){
 
     if(urlInput[0].checkValidity() && keywordInput[0].checkValidity() && emailInput[0].checkValidity()){
     $(".error-text").text("");
-     $("#loader").css("display","block");
-     $(".loader-text").text("Validerar webbadress");
-     $('.loader-text').delay(3000).queue(function(n) {  $(this).text('Analyserar Webbplats'); n(); });
      $.ajax({
-        method: "POST", 
+        method: "POST",
         url: "inc/seotool/analyze.php",
         data: inputs,
         success  : function(data){

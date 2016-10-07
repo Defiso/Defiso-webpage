@@ -65,7 +65,8 @@ get_header(); ?>
 						</div>
 
 						<?php if ( get_field('featured_quote_testemonials') ) {
-							/* @hooked featured_testemonials */ do_action( 'featured_quote_testemonials' );
+							/* @hooked featured_testemonials */
+							do_action( 'featured_quote_testemonials' );
 						}  ?>
 
 						<div class="contact-cta">
