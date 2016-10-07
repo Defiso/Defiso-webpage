@@ -18,6 +18,7 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
       <div class="front-page-jumbotron" <?php if ( get_field('jumbotron_background') ): ?> style="background-image: url('<?php echo get_field('jumbotron_background') ?>')" <?php endif; ?>>
+        <div class="overlay"></div>
         <div class="inner">
           <div class="content">
             <?php

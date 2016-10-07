@@ -1,25 +1,61 @@
 .front-page-jumbotron
   @extend .jumbotron
   padding-bottom: 0
+  position: relative
 
-  .inner .content
-    color: $base-font-color
-    text-align: left
+  +breakpoint(max-width $medium-screen)
+    background-position: 72% 50%
+
+
+  .overlay
+    position: absolute
+    background: rgba(0,0,0,0.45)
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
 
     +breakpoint($medium-screen)
-      +span(16)
+      background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%)
 
-    +breakpoint($large-screen)
-      +span(10)
+  .inner
+    position: relative
 
-    p
-      max-width: 100% !important
+    .content
+      text-align: left
 
-    button
-      @extend %cta-button
+      +breakpoint($medium-screen)
+        +span(16)
 
-    .form-group input
-      margin-top: $small-spacing
+      +breakpoint($large-screen)
+        +span(10)
+
+      p
+        max-width: 100% !important
+
+      strong
+        font-size: $large-font-size
+
+      .form-group
+        input
+          margin-top: $small-spacing
+          color: $base-font-color
+
+          &:first-child
+            margin-right: 0.85em
+
+          &:nth-child(-n+2)
+            float: left
+            width: calc(50% - 0.425em)
+
+        button
+          @extend %cta-button
+          float: left
+
+        .error-text
+          float: left
+          margin: $small-spacing/2 0 $small-spacing/2 $small-spacing
+
 
 .reporting
   @extend %container

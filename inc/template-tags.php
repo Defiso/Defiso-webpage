@@ -125,7 +125,7 @@ if ( ! function_exists( 'seotool' ) ) {
   function seotool() {
     $url = home_url("result");
     echo '
-          <strong>Håller din hemsida måttet SEO-mässigt? Testa direkt här.</strong>
+          <strong>Håller din hemsida måttet SEO-mässigt? Testa här.</strong>
           <form role="form" action='.$url.' class="text-center" method="POST">
             <div class="form-group">
               <input id="url-input" type="text" name="url" class="form-control" placeholder="Din hemsideadress" required>
