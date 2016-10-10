@@ -36,7 +36,15 @@
 		</div>
 
 		<div class="testemonials-info">
-			<img src="<?php echo the_field('logotype') ?>" alt="<?php the_title() ?>">
+			<?php
+				$image = get_field('logotype');
+				$url = $image['url'];
+
+				// thumbnail
+				$size = 'case-logo';
+				$thumb = $image['sizes'][ $size ];
+			?>
+			<img src="<?php echo $thumb ?>" alt="<?php the_title() ?>">
 			<?php if ( has_post_thumbnail() ): ?>
 				<img src="<?php the_post_thumbnail_url() ?>" alt="<?php the_title() ?>">
 			<?php endif; ?>

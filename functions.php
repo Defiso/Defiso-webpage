@@ -1,9 +1,4 @@
 <?php
-// Remove before production
-header("Access-Control-Allow-Origin: *");
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 /**
  * defisomedia functions and definitions.
@@ -149,7 +144,7 @@ add_action( 'widgets_init', 'defisomedia_widgets_init' );
 add_image_size ( "co-workers", 250, 312, array( 'center', 'top' ) );
 add_image_size ( "frontpage-case-logo", 250, 312, false );
 add_image_size ( "frontpage-reporting", 800, 450, false );
-add_image_size ( "case-logo", 252, 200, false );
+add_image_size ( "case-logo", 252, 120, false );
 
 /**
  * Enqueue scripts and styles.

@@ -103,19 +103,13 @@ get_header(); ?>
 							<div class="content">
 								<div class="columns">
 									<div class="column vertical-center">
-										<h3>Toppranking i den organiska träfflistan</h3>
-										<p>
-											Vill du se fler exempel på landningssidor från Defiso Media? Då föreslår vi att du gör nedanstående sökningar i Google och tittar längst upp i den organiska träfflistan:
-											<ul>
-												<li>”Stamspolning Stockholm”</li>
-												<li>”Städning Stockholm”</li>
-												<li>”Köksrenovering Stockholm”</li>
-												<li>”Bokföring Stockholm”</li>
-												<li>”Lediga Kontor Göteborg”</li>
-												<li>”Fönster Skellefteå”</li>
-											</ul>
-											Och det finns många, många fler landningssidor! <a href="http://www.defiso.se/kontakta-oss">Hör av dig till oss</a> så berättar vi mer.
-										</p>
+										<h3>Olika mallar för landningssidor</h3>
+										<p>När det gäller utseendet på våra landningssidor använder vi oss av flera olika varianter och anpassar alltid designen efter kundens verksamhet och önskemål. Dock utan 	att tumma på kvaliteten gällande optimering och konvertering.</p>
+
+											<p>Sidan här intill kan du hitta genom att söka på ”Golvläggare Stockholm”. Tanken är förstås att sidan ska signalera att Wasa Parkettservice är experter på att lägga golv.</p>
+
+											<p>Den person som sökt efter en golvläggare i Stockholm och valt toppresultatet i Google ska känna att det är ett tryggt och bra val, helt enkelt.
+ 										</p>
 									</div>
 									<div class="column ">
 										<img src="http://placehold.it/800x450?text=screenshot" alt="" />
