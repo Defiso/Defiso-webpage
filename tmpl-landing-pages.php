@@ -26,6 +26,8 @@ get_header(); ?>
 
 					<div class="entry-content">
 
+
+						<!-- THREE COLUMNS WITH IMAGE OVER -->
 						<div class="three-columns">
 			        <div class="content">
 			          <div class="header">
@@ -49,6 +51,8 @@ get_header(); ?>
 			        </div>
 			      </div>
 
+
+						<!-- THREE COLUMNS, TEXT ONLY -->
 						<?php if ( have_rows('landingpage_repeatable_columns') ): ?>
 							<?php while ( have_rows('landingpage_repeatable_columns') ) : the_row();
 								$first_column = get_sub_field('landingpage_repeatable_first_column');
@@ -73,51 +77,68 @@ get_header(); ?>
 							<?php endwhile; ?>
 						<?php endif; ?>
 
-						<div class="two-columns">
-							<div class="content">
-								<div class="header">
-			            <h2>Exempel på en landningssida</h2>
-			          </div>
-								<div class="columns">
-									<div class="column ">
-										<img src="http://placehold.it/800x450?text=screenshot" alt="" />
-									</div>
-									<div class="column vertical-center">
-										<h3>Snygga sidor med hög konverteringsgrad</h3>
-										<p>
-											Här finns ett exempel på hur en landningssida från Defiso Media kan se ut. Vill du se sidan i sin helhet kan du göra det live genom att göra sökningen ”Elektriker Stockholm” i Google, där den legat som stabil etta i ett antal månader. <strong>Några av nyckelelementen på sidan:</strong>
-											<ul>
-												<li>Namnet på sidan, tillika huvudsökordet, ”Elektriker Stockholm”, stort och tydligt uppe till vänster.</li>
-												<li>Kundens logga, i detta fall Djurstedts, uppe till höger.</li>
-												<li>Bilder och texter som är helt anpassade efter kundens verksamhet.</li>
-												<li>Kontaktmöjligheter på flera olika ställen (toppmenyn, sidokolumnen och huvudtexten).</li>
-												<li>Längst ner på sidan finns vår egen logotype.</li>
-											</ul>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
 
-						<div class="two-columns gray-bg">
-							<div class="content">
-								<div class="columns">
-									<div class="column vertical-center">
-										<h3>Olika mallar för landningssidor</h3>
-										<p>När det gäller utseendet på våra landningssidor använder vi oss av flera olika varianter och anpassar alltid designen efter kundens verksamhet och önskemål. Dock utan 	att tumma på kvaliteten gällande optimering och konvertering.</p>
+						<!-- TWO COLUMNS WITH IMAGE -->
+						<?php if ( have_rows('landingpage_repeatable_info') ): ?>
+							<?php
+								$rowCounter = 1;
+								while ( have_rows('landingpage_repeatable_info') ) : the_row();
+									$title 	= get_sub_field('landingpage_repeatable_info_title');
+									$text 	= get_sub_field('landingpage_repeatable_info_text');
+									$image 	= get_sub_field('landingpage_repeatable_info_image');
+							?>
 
-											<p>Sidan här intill kan du hitta genom att söka på ”Golvläggare Stockholm”. Tanken är förstås att sidan ska signalera att Wasa Parkettservice är experter på att lägga golv.</p>
+							<?php if ($rowCounter % 2): ?>
 
-											<p>Den person som sökt efter en golvläggare i Stockholm och valt toppresultatet i Google ska känna att det är ett tryggt och bra val, helt enkelt.
- 										</p>
-									</div>
-									<div class="column ">
-										<img src="http://placehold.it/800x450?text=screenshot" alt="" />
+								<div class="two-columns gray-bg">
+									<div class="content">
+										<?php if ($title): ?>
+											<div class="header">
+												<h2><?php echo $title; ?></h2>
+											</div>
+										<?php endif; ?>
+										<div class="columns">
+											<div class="column">
+												<img src="<?php echo $image; ?>" alt="Kolumn-bild">
+											</div>
+											<div class="column vertical-center">
+												<?php echo $text; ?>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
 
+							<?php else: ?>
+
+								<div class="two-columns">
+									<div class="content">
+										<?php if ($title): ?>
+											<div class="header">
+												<h2><?php echo $title; ?></h2>
+											</div>
+										<?php endif; ?>
+										<div class="columns">
+											<div class="column vertical-center">
+												<?php echo $text; ?>
+											</div>
+											<div class="column">
+												<img src="<?php echo $image; ?>" alt="Kolumn-bild">
+											</div>
+										</div>
+									</div>
+								</div>
+
+							<?php endif; ?>
+
+							<?php
+								$rowCounter++;
+							endwhile;
+							// IMPORTANT: destroy/remove variable rowCounter after all rows has been displayed
+							unset($rowCounter);
+						endif; ?>
+
+
+						<!-- FEATURED CASE -->
 						<?php
 							$testemonial = get_field('featured_box_testemonial');
 
@@ -143,45 +164,45 @@ get_header(); ?>
 							    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 							<?php endif; ?>
 
-							<div class="two-columns">
-								<div class="content">
-									<div class="header">
-				            <h2>Mer om konvertering</h2>
-				          </div>
-									<div class="columns">
-										<div class="column ">
-											<p>
-												Konvertering på hemsidor är en mindre vetenskap som bland annat omfattar besökarens beteendemönster (hur ögonen scannar av sidan, och så vidare), vilka färger som används, placering av de olika elementen och förstås hur texterna är formulerade.
-											</p>
-										</div>
-										<div class="column vertical-center">
-											<p>
-												Vi kommer inte gå in i detalj på allt detta här, men våra tekniker har full koll på konverteringsbiten. Så om ditt företags hemsida träffar bra i sökmotorerna men ändå inte levererar resultat kan vi hjälpa till med att spetsa till den, med (till synes) små, men effektiva medel.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
 
-							<div class="two-columns gray-bg">
-								<div class="content">
-									<div class="header">
-				            <h2>Snabbguide till landningssida</h2>
-				          </div>
-									<div class="columns">
-										<div class="column ">
-											<p>
-												Med en specialutvecklad landningssida från Defiso Media får ert företag in <strong>mängder av nya kunder och konkreta jobbförfrågningar</strong> via Google och andra sökmotorer. Den unika sidan skapas från grunden av oss på Defiso men <strong>anpassas till 100 procent efter ert företag</strong>, med logotype, bilder samt omfattande information om verksamheten och de tjänster ni erbjuder. Landningssidan <strong>byggs kring ett specifikt sökbegrepp</strong> som valts ut noggrant – och i nära samråd med er – för att ge ert företag maximal effekt. Detta är det snabbaste och säkraste sättet att nå en <strong>topposition i Google</strong>.
-											</p>
-										</div>
-										<div class="column vertical-center">
-											<p>
-												Sidans tydliga fokus på det aktuella sökbegreppet bekräftar för besökarna att de hamnat rätt, vilket <strong>skapar förtroende och köpvilja</strong>. Kundkonverteringen maximeras med stilren design, säljande texter och <strong>snabba, tydliga kontaktmöjligheter</strong>. Landningssidan genererar högvärdesförfrågningar som går <strong>direkt och enbart till ert företag</strong>, via telefon, e-post eller ett kontaktformulär på sidan. Noggrann uppföljning med till exempel samtalsmätning säkerställer att landningssidan <strong>levererar det resultat som förväntats</strong> – ofta ännu bättre!
-											</p>
+							<!-- TWO COLUMNS, TEXT ONLY -->
+							<?php if ( have_rows('landingpage_repeatable_bottom_info') ): ?>
+								<?php
+									$rowCounter = 1;
+									while ( have_rows('landingpage_repeatable_bottom_info') ) : the_row();
+										$title 					= get_sub_field('landingpage_repeatable_bottom_info_title');
+										$first_column 	= get_sub_field('landingpage_repeatable_bottom_info_first_column');
+										$second_column 	= get_sub_field('landingpage_repeatable_bottom_info_second_column');
+								?>
+
+								<?php if ($rowCounter % 2): ?>
+									<div class="two-columns">
+								<?php else: ?>
+									<div class="two-columns gray-bg">
+								<?php endif; ?>
+									<div class="content">
+										<?php if ($title): ?>
+											<div class="header">
+												<h2><?php echo $title; ?></h2>
+											</div>
+										<?php endif; ?>
+										<div class="columns">
+											<div class="column">
+												<?php echo $first_column; ?>
+											</div>
+											<div class="column">
+												<?php echo $second_column; ?>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
+
+								<?php
+									$rowCounter++;
+								endwhile;
+								// IMPORTANT: destroy/remove variable rowCounter after all rows has been displayed
+								unset($rowCounter);
+							endif; ?>
 
 
 						<?php

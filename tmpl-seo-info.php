@@ -26,6 +26,8 @@ get_header(); ?>
 
 					<div class="entry-content">
 
+
+						<!-- ONE TEXT FIELD WITH ROCKET IMAGE -->
 						<div class="two-columns">
 							<div class="content">
 								<div class="columns">
@@ -42,6 +44,8 @@ get_header(); ?>
 							</div>
 						</div>
 
+
+						<!-- THREE COLUMNS WITH ICONS OVER -->
 						<div class="three-columns gray-bg">
 							<div class="content">
 								<div class="header-center">
@@ -64,66 +68,49 @@ get_header(); ?>
 							</div>
 						</div>
 
+
+						<!-- THREE COLUMNS, SELECTED QUOTES -->
 						<?php if ( get_field('featured_quote_testemonials') ) {
 							/* @hooked featured_testemonials */
 							do_action( 'featured_quote_testemonials' );
 						}  ?>
 
+
+						<!-- CTA BLOCK -->
 						<div class="contact-cta">
 							<div class="inner">
 								<div class="header">
-									<h3>Få kostnadsfri SEO-rådgivning</h3>
+									<h3><?php echo get_field('seo_info_cta_title'); ?></h3>
 								</div>
 								<?php echo do_shortcode('[contact-form-7 id="193" title="Kontaktformulär"]'); ?>
 							</div>
 						</div>
 
+
+						<!-- TWO COLUMNS, TEXT ONLY WITH SPACEMAN HELMET UNDER -->
 						<div class="two-columns">
 							<div class="content">
 								<div class="header">
-									<h2>Så här arbetar vi med sökmotoroptimering</h2>
+									<h2><?php echo get_field('seo_info_title'); ?></h2>
 								</div>
 								<div class="columns">
 									<div class="column">
-										<h3>Sökmotoroptimering för små och stora företag</h3>
-										<p>
-											Att synas i sökmotorer - och då framförallt Google - blir allt viktigare för alla typer av företag. Syns man inte i sökmotorerna tappar man potentiella kunder – det är den enkla sanningen.
-										</p>
-										<p>
-											Det är här sökmotoroptimering, SEO, kommer in i bilden. Vi på Defiso Media arbetar med att ta fram skräddarsydda SEO-lösningar för företag i alla tänkbara branscher. Oavsett om ditt företag är litet eller stort, och oavsett vilket verksamhetsområdet är, så kan vi hjälpa dig att klättra mot toppen i sökresultaten.
-										</p>
-										<h3>Sökmotoroptimering på rätt sätt</h3>
-										<p>
-											Vi hjälper dig dessutom att synas på rätt sätt i sökmotorerna. Detta genom att hitta de optimala sökfraserna för just ditt företag - det vill säga, vad skulle en person som vill köpa just era tjänster eller produkter skriva in i en sökmotor? Du kan läsa mer om detta i högerspalten.
-										</p>
-										<p>
-											När vi identifierat de optimala sökorden riktar vi in våra optimeringsinsatser mot dessa och ingenting annat. Rankingen på dessa konverterande sökord är det enda som räknas. Vi kastar inte bort resurser på sådant som inte ger något i slutändan.
-										</p>
-										<p>
-											SEO är ett precisionsarbete och träffar man rätt kan det vara mycket lönsamt. Defiso Media träffar alltid rätt!
-										</p>
+										<?php echo get_field('seo_info_first_column'); ?>
 									</div>
 									<div class="column">
-										<h3>Våra unika arbetsmetoder för sökmotoroptimering</h3>
-										<p>
-											Klassisk sökmotoroptimering är att ta en befintlig hemsida och se till att den rankar på de sökord som är aktuella. Det är något vi har arbetat med i många år och behärskar till fullo - och gärna hjälper till med - men det som gör att Defiso Media sticker ut i mängden bland SEO-byråer är en unik produkt som kallas för landningssida.
-										</p>
-										<p>
-											Du kan läsa mer om detta på sidan där vi presenterar konceptet landningssida, men kortfattat går det ut på att vi bygger en sida från grunden som är helt och hållet anpassad för ditt företag – med er logga och era kontaktuppgifter - och optimerad på de mest lönsamma sökorden.
-										</p>
-										<p>
-											Alla företag har ju inte en egen hemsida och en landningssida är då ett perfekt sätt att så snabbt som möjligt vinna mark i den hårda kampen i sökmotorerna. Vi har hjälpt en mängd företag på detta vis, i branscher som städ, måleri, VVS och mycket mer.
-										</p>
+										<?php echo get_field('seo_info_second_column'); ?>
 										<img src="<?php echo get_template_directory_uri(); ?>/icons/spaceman.svg" class="media-align-center" alt="Rymdgubbe">
 									</div>
 								</div>
 							</div>
 						</div>
 
+
+						<!-- PROCESS INFO -->
 						<div class="process two-columns">
 							<div class="content">
 								<div class="header-center">
-									<h2>Mer om hur en SEO-analys utförs</h2>
+									<h2><?php echo get_field('seo_process_title'); ?></h2>
 								</div>
 								<div class="steps">
 									<div class="step">
@@ -153,80 +140,33 @@ get_header(); ?>
 								</div>
 								<div class="columns">
 									<div class="column">
-										<h3>Sökmotoroptimering för små och stora företag</h3>
-										<p>
-											Att synas i sökmotorer - och då framförallt Google - blir allt viktigare för alla typer av företag. Syns man inte i sökmotorerna tappar man potentiella kunder – det är den enkla sanningen.
-										</p>
-										<p>
-											Det är här sökmotoroptimering, SEO, kommer in i bilden. Vi på Defiso Media arbetar med att ta fram skräddarsydda SEO-lösningar för företag i alla tänkbara branscher. Oavsett om ditt företag är litet eller stort, och oavsett vilket verksamhetsområdet är, så kan vi hjälpa dig att klättra mot toppen i sökresultaten.
-										</p>
-										<h3>Sökmotoroptimering på rätt sätt</h3>
-										<p>
-											Vi hjälper dig dessutom att synas på rätt sätt i sökmotorerna. Detta genom att hitta de optimala sökfraserna för just ditt företag - det vill säga, vad skulle en person som vill köpa just era tjänster eller produkter skriva in i en sökmotor? Du kan läsa mer om detta i högerspalten.
-										</p>
-										<p>
-											När vi identifierat de optimala sökorden riktar vi in våra optimeringsinsatser mot dessa och ingenting annat. Rankingen på dessa konverterande sökord är det enda som räknas. Vi kastar inte bort resurser på sådant som inte ger något i slutändan.
-										</p>
-										<p>
-											SEO är ett precisionsarbete och träffar man rätt kan det vara mycket lönsamt. Defiso Media träffar alltid rätt!
-										</p>
+										<?php echo get_field('seo_process_first_column'); ?>
 									</div>
 									<div class="column">
-										<h3>Våra unika arbetsmetoder för sökmotoroptimering</h3>
-										<p>
-											Klassisk sökmotoroptimering är att ta en befintlig hemsida och se till att den rankar på de sökord som är aktuella. Det är något vi har arbetat med i många år och behärskar till fullo - och gärna hjälper till med - men det som gör att Defiso Media sticker ut i mängden bland SEO-byråer är en unik produkt som kallas för landningssida.
-										</p>
-										<p>
-											Du kan läsa mer om detta på sidan där vi presenterar konceptet landningssida, men kortfattat går det ut på att vi bygger en sida från grunden som är helt och hållet anpassad för ditt företag – med er logga och era kontaktuppgifter - och optimerad på de mest lönsamma sökorden.
-										</p>
-										<p>
-											Alla företag har ju inte en egen hemsida och en landningssida är då ett perfekt sätt att så snabbt som möjligt vinna mark i den hårda kampen i sökmotorerna. Vi har hjälpt en mängd företag på detta vis, i branscher som städ, måleri, VVS och mycket mer.
-										</p>
+										<?php echo get_field('seo_process_second_column'); ?>
 									</div>
 								</div>
 							</div>
 						</div>
 
+
+						<!-- TWO COLUMNS BOTTOM, TEXT ONLY -->
 						<div class="two-columns">
 							<div class="content">
 								<div class="header">
-									<h2>Satsa på permanenta länkar</h2>
+									<h2><?php echo get_field('seo_bottom_info_title'); ?></h2>
 								</div>
 								<div class="columns">
 									<div class="column">
-										<h3>Sökmotoroptimering för små och stora företag</h3>
-										<p>
-											Att synas i sökmotorer - och då framförallt Google - blir allt viktigare för alla typer av företag. Syns man inte i sökmotorerna tappar man potentiella kunder – det är den enkla sanningen.
-										</p>
-										<p>
-											Det är här sökmotoroptimering, SEO, kommer in i bilden. Vi på Defiso Media arbetar med att ta fram skräddarsydda SEO-lösningar för företag i alla tänkbara branscher. Oavsett om ditt företag är litet eller stort, och oavsett vilket verksamhetsområdet är, så kan vi hjälpa dig att klättra mot toppen i sökresultaten.
-										</p>
-										<h3>Sökmotoroptimering på rätt sätt</h3>
-										<p>
-											Vi hjälper dig dessutom att synas på rätt sätt i sökmotorerna. Detta genom att hitta de optimala sökfraserna för just ditt företag - det vill säga, vad skulle en person som vill köpa just era tjänster eller produkter skriva in i en sökmotor? Du kan läsa mer om detta i högerspalten.
-										</p>
-										<p>
-											När vi identifierat de optimala sökorden riktar vi in våra optimeringsinsatser mot dessa och ingenting annat. Rankingen på dessa konverterande sökord är det enda som räknas. Vi kastar inte bort resurser på sådant som inte ger något i slutändan.
-										</p>
-										<p>
-											SEO är ett precisionsarbete och träffar man rätt kan det vara mycket lönsamt. Defiso Media träffar alltid rätt!
-										</p>
+										<?php echo get_field('seo_bottom_info_first_column'); ?>
 									</div>
 									<div class="column">
-										<h3>Våra unika arbetsmetoder för sökmotoroptimering</h3>
-										<p>
-											Klassisk sökmotoroptimering är att ta en befintlig hemsida och se till att den rankar på de sökord som är aktuella. Det är något vi har arbetat med i många år och behärskar till fullo - och gärna hjälper till med - men det som gör att Defiso Media sticker ut i mängden bland SEO-byråer är en unik produkt som kallas för landningssida.
-										</p>
-										<p>
-											Du kan läsa mer om detta på sidan där vi presenterar konceptet landningssida, men kortfattat går det ut på att vi bygger en sida från grunden som är helt och hållet anpassad för ditt företag – med er logga och era kontaktuppgifter - och optimerad på de mest lönsamma sökorden.
-										</p>
-										<p>
-											Alla företag har ju inte en egen hemsida och en landningssida är då ett perfekt sätt att så snabbt som möjligt vinna mark i den hårda kampen i sökmotorerna. Vi har hjälpt en mängd företag på detta vis, i branscher som städ, måleri, VVS och mycket mer.
-										</p>
+										<?php echo get_field('seo_bottom_info_second_column'); ?>
 									</div>
 								</div>
 							</div>
 						</div>
+
 
 						<?php
 							the_content();
