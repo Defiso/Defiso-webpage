@@ -5,6 +5,7 @@
 
   article.post
     +span(full)
+      margin-bottom: $base-spacing
 
     +breakpoint($medium-screen)
       +span(16)
@@ -13,3 +14,12 @@
     +breakpoint($large-screen)
       +span(14)
       +push(5)
+
+.nav-links
+  +span(full)
+
+  .nav-previous
+    float: left
+
+  .nav-next
+    float: right

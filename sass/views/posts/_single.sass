@@ -18,15 +18,17 @@
   .entry-meta
     margin-top: $base-spacing
 
-  .entry-footer
-    margin-bottom: $base-spacing
-
 .navigation.post-navigation
-  +container
+  @extend %container
   margin-bottom: $base-spacing
 
   .nav-previous
     float: left
 
   .nav-next
-    float: right
+    float: left
+    margin-top: $base-spacing
+
+    +breakpoint($medium-screen)
+      float: right
+      margin-top: 0
