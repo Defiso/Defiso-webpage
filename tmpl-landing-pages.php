@@ -161,7 +161,7 @@ get_header(); ?>
 										</div>
 										<div class="right case-image" style="background-image:url('<?php echo wp_get_attachment_thumb_url(get_post_thumbnail_id()); ?>')"></div>
 									</div>
-							    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+							    <?php wp_reset_postdata(); // IMPORTANT: reset the $post object so the rest of the page works correctly ?>
 							<?php endif; ?>
 
 
@@ -176,9 +176,9 @@ get_header(); ?>
 								?>
 
 								<?php if ($rowCounter % 2): ?>
-									<div class="two-columns">
-								<?php else: ?>
 									<div class="two-columns gray-bg">
+								<?php else: ?>
+									<div class="two-columns">
 								<?php endif; ?>
 									<div class="content">
 										<?php if ($title): ?>

@@ -176,7 +176,9 @@ if ( ! function_exists( 'featured_quote_testemonials' ) ) {
 
 			echo '
 						<div class="column">
+							<div class="client-logotype">
 							<img src="' . $thumb . '" alt="' . get_the_title($post_object->ID) . '" />
+							</div>
 							<h3>' . get_the_title($post_object->ID) . '</h3>
 							<p>' . get_field('quote', $post_object->ID) . '</p>
 						</div>
