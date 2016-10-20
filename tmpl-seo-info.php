@@ -150,22 +150,44 @@ get_header(); ?>
 						</div>
 
 
-						<!-- TWO COLUMNS BOTTOM, TEXT ONLY -->
-						<div class="two-columns">
-							<div class="content">
-								<div class="header">
-									<h2><?php echo get_field('seo_bottom_info_title'); ?></h2>
-								</div>
-								<div class="columns">
-									<div class="column">
-										<?php echo get_field('seo_bottom_info_first_column'); ?>
-									</div>
-									<div class="column">
-										<?php echo get_field('seo_bottom_info_second_column'); ?>
+						<!-- TWO COLUMNS, TEXT ONLY -->
+						<?php if ( have_rows('seo_repeatable_bottom_info') ): ?>
+							<?php
+								$rowCounter = 1;
+								while ( have_rows('seo_repeatable_bottom_info') ) : the_row();
+									$title 					= get_sub_field('seo_repeatable_bottom_info_title');
+									$first_column 	= get_sub_field('seo_repeatable_bottom_info_first_column');
+									$second_column 	= get_sub_field('seo_repeatable_bottom_info_second_column');
+							?>
+
+							<?php if ($rowCounter % 2): ?>
+								<div class="two-columns">
+							<?php else: ?>
+								<div class="two-columns gray-bg">
+							<?php endif; ?>
+								<div class="content">
+									<?php if ($title): ?>
+										<div class="header">
+											<h2><?php echo $title; ?></h2>
+										</div>
+									<?php endif; ?>
+									<div class="columns">
+										<div class="column">
+											<?php echo $first_column; ?>
+										</div>
+										<div class="column">
+											<?php echo $second_column; ?>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+
+							<?php
+								$rowCounter++;
+							endwhile;
+							// IMPORTANT: destroy/remove variable rowCounter after all rows has been displayed
+							unset($rowCounter);
+						endif; ?>
 
 
 						<?php
