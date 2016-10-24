@@ -38,7 +38,7 @@ get_header(); ?>
 										<?php echo get_field('seo_intro_text') ?>
 									</div>
 									<div class="column">
-										<img src="<?php echo get_template_directory_uri(); ?>/illustrations/rocket.svg" alt="Raket">
+										<img class="seo-info-rocket" src="<?php echo get_template_directory_uri(); ?>/illustrations/rocket.svg" alt="Raket">
 									</div>
 								</div>
 							</div>
