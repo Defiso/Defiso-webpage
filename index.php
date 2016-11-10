@@ -34,7 +34,7 @@ get_header(); ?>
 			    <div class="content">
 			      <h1 class="entry-title">Nyheter</h1>
 						<p>
-							Nyheter och innlägg om Defiso och sökmotoroptimering
+							Nyheter och inlägg om Defiso och sökmotoroptimering
 						</p>
 			    </div>
 			  </div>
