@@ -26,7 +26,7 @@
           <li class="header">Defiso Media AB</li>
           <li>Olof Palmes Gata 20B</li>
           <li>111 37 Stockholm</li>
-          <li>08-410 344 35 </li>
+          <li>08 410 344 02</li>
           <li>info@defiso.se</li>
         </ul>
       </div>

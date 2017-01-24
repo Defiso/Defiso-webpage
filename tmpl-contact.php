@@ -33,13 +33,13 @@ get_header(); ?>
                 </div>
                 <div class="contact-information">
                   <p>
-                    Ring vår kundtjänst på 08-410 344 35 för en kostnadsfri SEO-rådgivning för ditt företag, eller om du har några frågor eller funderingar kring sökmotoroptimering i allmänhet.
+                    Ring vår kundtjänst på 08 410 344 02 för en kostnadsfri SEO-rådgivning för ditt företag, eller om du har några frågor eller funderingar kring sökmotoroptimering i allmänhet.
                   </p>
                   <p>
                     Defiso Media<br>
                     Olof Palmes Gata 20B<br>
                     111 37 Stockholm<br>
-                    08-410 344 35<br>
+                    08 410 344 02<br>
                     <a href="mailto:info@defiso.se">info@defiso.se</a>
                   </p>
                 </div>
