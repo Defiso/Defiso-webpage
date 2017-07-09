@@ -88,3 +88,18 @@ hr {
     visibility: visible;
   }
 }
+
+ul.checkmarks {
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    background-image: url('icons/check.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 23px 23px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
+}
+

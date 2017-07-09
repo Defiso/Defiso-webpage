@@ -26,9 +26,12 @@
       font-weight: $bold-font-weight
 
     .email
-      color: $base-font-color
       font-weight: $base-font-weight
+      word-break: break-word
+
+      &:hover
+        text-decoration: underline
 
       &:hover,
       &:focus
-        color: lighten($base-font-color, 20%)
+        color: lighten($action-color, 20%)

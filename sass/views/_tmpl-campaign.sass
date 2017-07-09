@@ -1,0 +1,187 @@
+.page-template-tmpl-campaign
+  .entry-content
+    padding-top: $base-spacing
+
+  .jumbotron
+    a
+      background-color: $pink
+      margin-top: 7px
+
+      &:hover,
+      &:focus
+        background-color: shade($pink, 10%)
+
+  .intro
+    @extend %container
+    max-width: 1000px
+    padding-bottom: $base-spacing
+
+    .checkmarks
+      +breakpoint($medium-screen)
+        margin-top: 3em
+
+    .left
+      +breakpoint($medium-screen)
+        +span(6 of 12)
+
+    .right
+      +breakpoint($medium-screen)
+        +span(6 of 12 last)
+
+    .header
+      +box-header
+
+  .references
+    padding-top: $base-spacing
+    padding-bottom: $base-spacing * 3
+    background-color: #f4f5f5
+
+    h2
+      +box-header(center)
+      margin-bottom: $base-spacing
+
+    .inner
+      @extend %container
+
+    .left
+      +breakpoint($medium-screen)
+        +span(6 of 12)
+
+    .right
+      +breakpoint($medium-screen)
+        +span(6 of 12 last)
+
+    .reference
+      +breakpoint($medium-screen)
+        display: -ms-flexbox
+        display: -webkit-flex
+        display: flex
+
+        -ms-flex-align: center
+        -webkit-align-items: center
+        -webkit-box-align: center
+
+        align-items: center
+
+        flex-direction: row
+
+    .reference-image
+      border-radius: 100%
+
+      +breakpoint($medium-screen)
+        margin-right: 2em
+
+    .quote
+
+      .text
+        font-style: italic
+
+      .by
+        font-weight: 600
+
+  .chess
+
+    .row
+      +clearfix
+      +breakpoint($medium-screen)
+        display: -ms-flexbox
+        display: -webkit-flex
+        display: flex
+
+        flex-direction: row
+
+
+
+    +breakpoint($medium-screen)
+      +clearfix
+
+    .left .content,
+    .right .content
+      +container($container-width/2)
+      padding: $container-spacing * 2
+
+      +breakpoint($medium-screen)
+        display: flex
+        flex-direction: column
+        padding: $container-spacing * 4.5
+
+
+      .header
+        +box-header
+
+      .header-center
+        +box-header(center)
+
+      p:last-child
+        margin-bottom: 0
+
+    .left
+      +breakpoint($medium-screen)
+        float: left
+        width: 50%
+
+        .content
+          float: right
+
+    .right
+      +breakpoint($medium-screen)
+        float: right
+        width: 50%
+
+        .content
+          float: left
+
+    .grey
+      background-color: $light-gray
+
+      .content
+        width: 100%
+        align-items: center
+
+    .bg-image
+      background-image: url('images/jumbotron.jpg')
+      background-repeat: no-repeat
+
+      +breakpoint($medium-screen)
+        background-position: -1190px -350px
+
+      +breakpoint($large-screen)
+        background-position: -950px -350px
+
+    .icon-section-wrap
+
+
+    .icon-wrapper
+      display: flex
+      align-items: center
+      margin-bottom: 1.1em
+
+      .icon
+        margin-right: 1.3em
+
+  .form-area
+    +clearfix
+    background-color: $light-gray
+    margin-top: 2em
+
+    .inner
+      @extend %container
+      max-width: 950px
+      padding-top: $base-spacing
+      padding-bottom: $base-spacing
+
+    .left
+      +breakpoint($medium-screen)
+        +span(6 of 12)
+
+    .right
+      +breakpoint($medium-screen)
+        +span(6 of 12 last)
+        margin-top: 4em
+
+    .header
+      +box-header
+
+    [type='text'],
+    [type='tel']
+      background-color: #FFFFFF

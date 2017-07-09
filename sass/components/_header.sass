@@ -2,7 +2,6 @@ $menu-duration: $base-duration*1.5
 
 .site-header
   background-color: rgba($theme-color, 0.9)
-  padding: $small-spacing 0
   position: fixed
   width: 100%
   z-index: $z-index-menu
@@ -14,12 +13,31 @@ $menu-duration: $base-duration*1.5
 
   .site-branding
     float: left
+    padding: $small-spacing 0
 
     img
       display: block
 
+  .header-cta
+    display: none
+
+    +breakpoint($large-screen)
+      display: block
+      color: #FFFFFF
+      float: left
+      margin-left: 1.5em
+      padding-top: $small-spacing * 0.7
+
+    .button
+      @extend %cta-button
+      background-color: $pink
+      border-radius: 30px
+      padding: 8px 17px
+      margin-right: 1.1em
+
   .right
     float: right
+    padding: $small-spacing 0
 
   #openMenu
     padding: 0

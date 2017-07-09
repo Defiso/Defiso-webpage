@@ -55,6 +55,11 @@
 				<?php endif; ?>
 			</div>
 
+      <div class="header-cta">
+        <a href="/kontakt" class="button">Be om offert</a>
+        <span class="phone">08 - 410 344 02</span>
+      </div>
+
 			<div class="right">
 				<nav id="site-navigation" class="inline-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
